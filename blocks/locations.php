@@ -11,7 +11,7 @@ if (!empty($locations)) {
     <div id="locations">
         <div class="container-fluid">
             <div id="locations-top">
-                <h1>
+                <h1 data-delay="100">
                     <?php echo nl2br($title); ?>
                 </h1>
 
@@ -27,23 +27,23 @@ if (!empty($locations)) {
                     ?>
                     <div class="col-sm-6">
                         <div class="one-location">
-                            <div class="the-map" data-lat="<?php echo $position_on_the_map['lat'] ?>" darta-lng="<?php echo $position_on_the_map['lng'] ?>"></div>
-                            <h3>
+                            <div data-delay="100" class="the-map" data-lat="<?php echo $position_on_the_map['lat'] ?>" data-lng="<?php echo $position_on_the_map['lng'] ?>"></div>
+                            <h3 data-delay="200">
                                 <?php echo $name ?>
                             </h3>
-                            <p>
+                            <p class="address" data-delay="300">
                                 <?php echo $address ?>
                             </p>
                             <div class="row row-spaced">
                                 <?php if ($address): ?>
-                                    <div class="col-4">
+                                    <div data-delay="350" class="col-4 one-loc-bottom">
                                         <p class="ol-stat-header">
                                             <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode($address) ?>&hl=pl">Get Directions</a>
                                         </p>
                                     </div>
                                 <?php endif ?>
                                 <?php if ($operation_hours): ?>
-                                    <div class="col-4">
+                                    <div data-delay="400" class="col-4 one-loc-bottom">
                                         <p class="ol-stat-header">
                                             OPERATION HOURS 
                                         </p>
@@ -53,7 +53,7 @@ if (!empty($locations)) {
                                     </div>
                                 <?php endif ?>
                                 <?php if ($phone): ?>
-                                    <div class="col-4">
+                                    <div data-delay="450" class="col-4 one-loc-bottom">
                                         <p class="ol-stat-header">
                                             PHONE
                                         </p>
