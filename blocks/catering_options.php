@@ -17,10 +17,12 @@ if (!empty($content)) {
                 ?>
                 <div class="col-sm-6">
                     <div class="co-content">
-                        <h2 class="oc-con-title">
+                        <h2 data-delay="100" class="oc-con-title">
                             <?php echo $title ?>
                         </h2>
-                        <?php echo $content ?>
+                        <div data-delay="200" class="oc-con-content">
+                            <?php echo $content ?>
+                        </div>
                     </div>
                 </div>
                 <?php

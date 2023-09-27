@@ -17,7 +17,7 @@ $columns = [[], []];
 ?>
 <div id="press">
     <div class="container-fluid">
-        <h1>
+        <h1 data-delay="100">
             <?php echo $title ?>
         </h1>
 
@@ -26,7 +26,7 @@ $columns = [[], []];
                 <?php
                 foreach ($press as $key => $single_press) {
                     ?>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" data-delay="100|100|6">
                         <?php
                         $magazine_name = $single_press['magazine_name']; //text
                         $article_title = $single_press['article_title']; //text
@@ -44,7 +44,9 @@ $columns = [[], []];
                                         ?>
                                     </span>
                                 </span>
-                                <?php echo $article_title ?>
+                                <span class="op-bottom">
+                                    <?php echo $article_title ?>
+                                </span>
                             </a>
                         </div>
                     </div>

@@ -1376,7 +1376,10 @@ header
         color: $green;
     }
 
-    input[type="text"]
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea
     {
         height:50rem;
         background:#fff;
@@ -2274,31 +2277,31 @@ header div>ul li.current-menu-item a
 #locations
 {
     padding: 170rem 0;
-    
+
     @media all and (max-width: 1024px)
-    {
+        {
         padding: 100rem 0;
     }
-    
+
     @media all and (max-width: 575px)
-    {
+        {
         padding: 60rem 0;
     }
-    
+
     h1
     {
         text-align:center;
         @include fs100;
         margin-bottom: 50rem;
         @media all and (min-width: 1025px)
-        {
+            {
             margin-bottom: 100rem;
             line-height: 0.95;
         }
     }
 
     @media all and (min-width: 1025px)
-    {
+        {
         .row
         {
             margin-left: -50rem;
@@ -2310,10 +2313,10 @@ header div>ul li.current-menu-item a
             }
         }
     }
-    
-    
-    
-    
+
+
+
+
     .one-location
     {
         .the-map
@@ -2337,33 +2340,33 @@ header div>ul li.current-menu-item a
         {
 
         }
-        
+
         @media all and (max-width: 575px)
             {
-                .col-4
-                {
-                    width:100%;
-                    flex:100%;
-                    min-width:100%;
-                    max-width:100%;
-                }
+            .col-4
+            {
+                width:100%;
+                flex:100%;
+                min-width:100%;
+                max-width:100%;
             }
+        }
 
         .one-loc-bottom
         {
-            
-            
+
+
             .ol-stat-header
             {
-               
+
                 margin-bottom: 15rem;
                 font-weight: bold;
                 @include fs18;
                 text-transform: uppercase;
-                
+
                 a
                 {
-                     text-decoration: underline;
+                    text-decoration: underline;
                     text-decoration: underline;
                     color:$green;
                     &:hover
@@ -2372,15 +2375,15 @@ header div>ul li.current-menu-item a
                     }
                 }
             }
-            
+
             a
-                {
-                    color:$green;
-                    &:hover
-                        {
-                        color:$pink;
-                    }
+            {
+                color:$green;
+                &:hover
+                    {
+                    color:$pink;
                 }
+            }
         }
 
 
@@ -2393,10 +2396,570 @@ header div>ul li.current-menu-item a
     {
         margin-bottom: 60rem;
     }
-    
+
     #locations .one-location .the-map
     {
         margin-bottom: 40rem;
     }
+
+}
+
+#catering-hero
+{
+    .col-sm-6:nth-child(1)
+        {
+        img
+        {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .col-sm-6:nth-child(2)
+        {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media all and (min-width: 576px)
+        {
+        .row
+        {
+            flex-direction: row-reverse;
+        }
+    }
+
+    #catering-hero-content
+    {
+        padding: 15rem;
+        max-width: 650rem;
+        margin:auto;
+
+
+
+        h1
+        {
+            margin-bottom: 15rem;
+            @include fs100;
+            color:$green;
+            @media all and (min-width: 1025px)
+                {
+                line-height: 0.95;
+            }
+        }
+
+        p:not(.button-wrapper)
+            {
+            @include fs40;
+
+        }
+
+        .button-wrapper
+        {
+            margin-top:80rem;
+        }
+    }
+}
+
+#catering-option
+{
+    text-align: center;
+
+    .col-sm-6:nth-child(1)
+        {
+        background:$green;
+        *
+        {
+            color:$bodyBg;
+        }
+    }
+
+    .col-sm-6:nth-child(2)
+        {
+        background:$yellow;
+    }
+
+    .co-content
+    {
+        padding: 140rem 15rem;
+        margin: auto;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        .oc-con-title
+        {
+            margin-bottom: 140rem;
+        }
+    }
+
+    .oc-con-content
+    {
+        max-width: 510rem;
+        margin:auto;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3
+        {
+            margin-bottom: 40rem;
+            @include fs40;
+        }
+
+        p
+        {
+            @include fs30;
+
+            span
+            {
+                text-decoration: none!important;
+                @include fs24;
+                display:block;
+                margin-top:30rem;
+                font-weight:bold;
+            }
+
+            strong
+            {
+
+            }
+        }
+
+    }
+
+
+}
+
+#get-custom-quote
+{
+    padding:200rem 0;
+
+    .container-fluid
+    {
+        max-width:1500rem;
+    }
+
+    h2
+    {
+        @include fs100;
+        line-height: 0.95;
+    }
+
+    p:last-child
+        {
+        @include fs30;
+        color:$green;
+        text-transform: uppercase;
+        margin-top:50rem;
+        font-weight: bold;
+        a{
+            color:$green;
+            text-decoration: underline;
+            &:hover
+                {
+                color:$pink;
+            }
+        }
+    }
+
+    form
+    {
+        margin-bottom: 200rem;
+        .gfield--type-html
+        {
+            margin-top:40rem;
+            margin-bottom: 40rem;
+            @include fs36;
+            color:$green;
+            font-weight: bold;
+        }
+
+        #field_2_17
+        {
+            @include fs24;
+        }
+
+        @include niceForm;
+        input[type="text"],
+        input[type="email"],
+        select
+        {
+            background:none;
+            border: 0;
+            color:$green;
+            height:80rem;
+            border-bottom: 1px solid $green;
+        }
+
+        label
+        {
+            @include fs60;
+            font-weight:400;
+            color:$green;
+            margin-bottom: 20rem;
+        }
+
+        textarea
+        {
+            background:none;
+            padding: 15rem;
+            height: 500rem;
+            border: 1px solid $green;
+        }
+
+        .gform_footer
+        {
+            justify-content: center;
+            input
+            {
+                width:100%;
+                max-width:280rem;
+                color: #59585A;
+                background: #EEEDE6;
+            }
+        }
+    }
+
+    h2:nth-child(1)
+        {
+        margin-bottom: 180rem;
+    }
+}
+
+@media all and (max-width: 575px)
+{
+    #catering-option .co-content
+    {
+        padding: 65rem 15rem;
+    }
+
+    #catering-option .co-content .oc-con-title
+    {
+        margin-bottom: 50rem;
+    }
+
+    #get-custom-quote
+    {
+        padding: 80rem 0;
+    }
+
+    #get-custom-quote h2:nth-child(1)
+    {
+        margin-bottom: 50rem;
+    }
+
+    #get-custom-quote form input[type=text], #get-custom-quote form input[type=email], #get-custom-quote form select, #get-custom-quote form textarea
+    {
+        font-size: 20rem;
+    }
+
+    #get-custom-quote form input[type=text], #get-custom-quote form input[type=email], #get-custom-quote form select
+    {
+        height: 65rem;
+    }
+
+    #get-custom-quote form
+    {
+        margin-bottom: 60rem;
+    }
+
+    #get-custom-quote form .gfield--type-html
+    {
+        margin-top:20rem;
+        margin-bottom: 20rem;
+    }
+
+    #get-custom-quote form textarea
+    {
+        height:200rem;
+    }
+
+    #get-custom-quote p:last-child
+    {
+        font-size: 17rem;
+    }
+}
+
+#press
+{
+    padding-top:120rem;
+    padding-bottom: 170rem;
+    h1
+    {
+        margin-bottom: 95rem;
+        @include fs100;
+        color:$green;
+    }
+
+    .container-fluid
+    {
+        max-width: 1670rem;
+    }
+
+    .row
+    {
+        margin: -40rem -70rem;
+        >div
+        {
+            padding: 40rem 70rem;
+        }
+        @media all and (max-width: 1024px)
+            {
+            margin: -40rem -15rem;
+            >div
+            {
+                padding: 40rem 15rem;
+            }
+        }
+    }
+
+    .one-press
+    {
+        a
+        {
+            display: block;
+            transition: 0s;
+            color:$green;
+
+            .op-top{
+                display: flex;
+                text-transform: uppercase;
+                @include fs24;
+                align-items: center;
+                transition: 0.55s;
+                justify-content: space-between;
+                margin-bottom: 20rem;
+                svg
+                {
+                    width: 28rem;
+                    height: auto;
+                    path
+                    {
+                        transition: 0.55s;
+                    }
+                }
+            }
+
+
+
+            .op-bottom
+            {
+                padding-top:20rem;
+                @include fs36;
+                @include BNAxelGrotesk;
+                font-weight: bold;
+                display:block;
+                text-transform: uppercase;
+                border-top: 1px solid $green;
+                transition: 0.55s;
+            }
+
+            &:hover
+                {
+                color:$pink;
+                svg path
+                {
+                    fill:$pink;
+                }
+
+                .op-bottom
+                {
+                    border-top: 1px solid $pink;
+                }
+            }
+
+        }
+    }
+}
+
+#contact
+{
+    background: $green;
+    padding: 200rem 0;
+
+    *
+    {
+        color:$bodyBg;
+    }
+
+    .container-fluid
+    {
+        max-width: 1670rem;
+    }
+
+    #contact-left
+    {
+        h1
+        {
+            margin-bottom: 58rem;
+            @include fs100;
+        }
+
+        p
+        {
+            @include fs26;
+            max-width: 510rem;
+        }
+    }
+
+    .gform_required_legend
+        {
+            display:none!important;
+        }
+
+    form
+    {
+        max-width: 870rem;
+        
+        label
+        {
+            color:#fff;
+            @include fs30;
+            @include BNAxelGrotesk;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea
+        {
+            border: 0;
+            background: $bodyBg;
+            @include fs20;
+            padding: 0 15rem;
+            color:$green;
+        }
+
+        input[type="text"],
+        input[type="email"]
+        {
+            height: 65rem;
+
+        }
+        
+        .gfield:not(:last-child)
+            {
+            margin-bottom: 30rem;
+        }
+
+        textarea
+        {
+            height:170rem;
+            padding: 15rem;
+        }
+
+        input[type="submit"]
+        {
+            @include theButton;
+            width:100%;
+            max-width:280rem;
+        }
+    }
+
+
+
+    #contact-bottom
+    {
+        margin-top:200rem;
+        h2
+        {
+            @include fs100;
+        }
+
+        .faq-wrapper
+        {
+            max-width: 760rem;
+            .one-faq
+            {
+                margin-bottom: 20rem;
+
+                .one-faq-question
+                {
+                    display: flex;
+                    cursor:pointer;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include fs24;
+                    svg
+                    {
+                        margin-left:10rem;
+                        transition: 0.55s;
+                        transform-origin: 50% 50%;
+                    }
+                }
+
+                &.active
+                {
+                    .one-faq-question
+                    {
+                        svg
+                        {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .one-faq-answer
+                {
+                    padding-top: 15rem;
+                    p
+                    {
+                        @include fs18;
+                        line-height: 1.5;
+                    }
+                    display:none;
+                }
+            }
+        }
+
+    }
+}
+
+@media all and (max-width: 575px)
+{
+    #contact
+    {
+        padding: 60rem 0;
+    }
     
+    #contact #contact-left h1
+    {
+        margin-bottom: 30rem;
+    }
+    
+    #contact #contact-bottom
+    {
+        margin-top:80rem;
+    }
+    
+    #contact form .gfield:not(:last-child)
+    {
+        margin-bottom: 15rem;
+    }
+    
+    #contact form input[type=text], #contact form input[type=email]
+    {
+        height:50rem;
+    }
+    
+    #contact form textarea
+    {
+        height:130rem;
+    }
+}
+
+.alergen
+{
+    &.vegan
+    {
+        
+    }
+}
+
+#nutrition-information
+{
+    padding: 60rem 0;
 }

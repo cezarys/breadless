@@ -13,22 +13,24 @@ $picture = $section['picture']; //image
 ?>
 <div id="catering-hero">
     <div class="row row-0">
-        <div class="col-sm-6">
+        <div class="col-sm-6" data-delay="100">
             <?php
             imgOrSvg($picture);
             ?>
         </div>
         <div class="col-sm-6">
             <div id="catering-hero-content">
-                <h1>
+                <h1 data-delay="100">
                     <?php echo $title ?>
                 </h1>
-                <p>
+                <p data-delay="200">
                     <?php echo $text ?>
                 </p>
-                <?php
-                buttonWithWrapper($button_label, $button_url);
-                ?>
+                <div data-delay="300">
+                    <?php
+                    buttonWithWrapper($button_label, $button_url);
+                    ?>
+                </div>
             </div>
         </div>
     </div>
