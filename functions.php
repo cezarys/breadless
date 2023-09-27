@@ -51,7 +51,6 @@ function getBlogPageId() {
 
 /* * *********AJAX HANDLING****** */
 
-
 function addSidebar($id, $name) {
     register_sidebar(array(
         'name' => $name,
@@ -168,22 +167,22 @@ function theme_init() {
     register_nav_menus(array(
         'top-menu' => 'Top Menu',
         'footer-menu' => 'Footer Menu',
-        'footer-menu-2'=>'Footer Menu 2'
+        'footer-menu-2' => 'Footer Menu 2'
     ));
-    
+
     register_post_type('products', array(
-      'labels' => array('name' => __('Products'), 'singular_name' => __('Products')),
-      'public' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'hierarchical' => true,
-      'exclude_from_search' => true,
-      //'exclude_from_search' => true,
-      //'publicaly_queryable' => false,
-      'show_in_nav_menus' => true,
-      'menu_position' => 5,
-      'supports' => array('title')
-      )); 
+        'labels' => array('name' => __('Products'), 'singular_name' => __('Products')),
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'hierarchical' => true,
+        'exclude_from_search' => true,
+        //'exclude_from_search' => true,
+        //'publicaly_queryable' => false,
+        'show_in_nav_menus' => true,
+        'menu_position' => 5,
+        'supports' => array('title')
+    ));
 
     /*
       register_post_type('slider', array(
@@ -541,17 +540,15 @@ function yoasttobottom() {
 
 add_filter('wpseo_metabox_prio', 'yoasttobottom');
 
-
-
 function send_newsletter() {
     require_once dirname(__FILE__) . '/vendor2/autoload.php';
-    
+
     $mailchimp_api_key = get_field('mailchimp_api_key', 'option');
     $mailchimp_list_id = get_field('mailchimp_list_id', 'option');
     $subscription_thank_you_message = get_field('mailchimp_success_message', 'option');
 
     $email = $_POST['the_email'];
-    
+
     try {
 
         $client = new MailchimpMarketing\ApiClient();
@@ -567,7 +564,7 @@ function send_newsletter() {
     } catch (Exception $ex) {
         
     }
-   echo '<div class="full-w"><p class="thank-you text-center">' . $subscription_thank_you_message . '</p></div>';
+    echo '<div class="full-w"><p class="thank-you text-center">' . $subscription_thank_you_message . '</p></div>';
 
     die();
 }
@@ -730,7 +727,7 @@ add_action('init', function () {
     }
 });
 
-function socialIcon($url,$icon) {
+function socialIcon($url, $icon) {
     if ($url && $icon) {
         ?>
         <a href="<?php echo $url ?>" target="_blank">
@@ -740,53 +737,45 @@ function socialIcon($url,$icon) {
     }
 }
 
-add_action('init',function()
-{
-   if(isset($_GET['cut-picture'])) 
-   {
-       $id = $_GET['cut-picture'];
-       
-       $pic = wp_get_attachment_image_src($id,'full');
-       
-       $pic = $pic[0];
-       $pic = explode('wp-content/',$pic);
-       
-       $url = './wp-content/'.$pic[1];
-      
-       $sizes = getimagesize($url);
-       if(strpos($url, '.jpg') || strpos($url, '.jpeg'))
-       {
-           $picture = imagecreatefromjpeg($url);
-       }
-       else
-       {
-           $picture = imagecreatefrompng($url);
-       }
-       
-       $width = $sizes[0];
-       $height = $sizes[1];
-       
-       $newWidth = $width-2;
-       $newHeight = $height-2;
-       
-       $new = imagecreatetruecolor($newWidth, $newHeight);
-       imagecopy($new,$picture,0,0,1,1,$newWidth,$newHeight);
-       
-       if(strpos($url, '.jpg') || strpos($url, '.jpeg'))
-       {
-           header('Content-Type: image/jpeg');
-           imagejpeg($new,null,100);
-           imagejpeg($new,$url,100);
-       }
-       else
-       {
-           header('Content-Type: image/png');
-           imagepng($new);
-           imagepng($new,$url);
-       }
-       
-            die();
-   }
+add_action('init', function () {
+    if (isset($_GET['cut-picture'])) {
+        $id = $_GET['cut-picture'];
+
+        $pic = wp_get_attachment_image_src($id, 'full');
+
+        $pic = $pic[0];
+        $pic = explode('wp-content/', $pic);
+
+        $url = './wp-content/' . $pic[1];
+
+        $sizes = getimagesize($url);
+        if (strpos($url, '.jpg') || strpos($url, '.jpeg')) {
+            $picture = imagecreatefromjpeg($url);
+        } else {
+            $picture = imagecreatefrompng($url);
+        }
+
+        $width = $sizes[0];
+        $height = $sizes[1];
+
+        $newWidth = $width - 2;
+        $newHeight = $height - 2;
+
+        $new = imagecreatetruecolor($newWidth, $newHeight);
+        imagecopy($new, $picture, 0, 0, 1, 1, $newWidth, $newHeight);
+
+        if (strpos($url, '.jpg') || strpos($url, '.jpeg')) {
+            header('Content-Type: image/jpeg');
+            imagejpeg($new, null, 100);
+            imagejpeg($new, $url, 100);
+        } else {
+            header('Content-Type: image/png');
+            imagepng($new);
+            imagepng($new, $url);
+        }
+
+        die();
+    }
 });
 
 function crop_link_add($actions, $post) {
@@ -796,3 +785,72 @@ function crop_link_add($actions, $post) {
 }
 
 add_filter('media_row_actions', 'crop_link_add', 10, 2);
+
+function oneMenu($item, $full = false) {
+    $picture = get_field('picture', $item->ID); //image
+    $alergens = get_field('alergens', $item->ID); //checkbox
+    $description = get_field('description', $item->ID); //textarea
+    $price = get_field('price', $item->ID); //text
+    $calories = get_field('calories', $item->ID); //text
+    $protein = get_field('protein', $item->ID); //text
+    $carbs = get_field('carbs', $item->ID); //text
+    $fat = get_field('fat', $item->ID); //text
+    ?>
+    <div class="one-menu">
+        <p class="one-menu-picture">
+            <?php
+            imgOrSvg($picture);
+            ?>
+        </p>
+
+        <p class="one-menu-title">
+            <?php
+            echo $item->post_title;
+            foreach ($alergens as $alg) {
+                ?>
+                <span class="alergen <?php echo $alg ?>"></span>
+                <?php
+            }
+            ?>
+        </p>
+        <p class="one-menu-descripion">
+            <?php echo $description ?>
+        </p>
+        <?php if ($full): ?>
+            <div class="one-menu-price-wrapper">
+                <?php if ($price): ?>
+                    <div class="one-menu-price"><?php echo $price ?></div>
+                <?php endif ?>
+                <?php if ($calories): ?>
+                    <div class="one-menu-macros">
+                        <?php if ($calories): ?>
+                            <div>
+                                <?php echo $calories ?>
+                                <br />CALORIES
+                            </div>
+                        <?php endif ?>
+                        <?php if ($protein): ?>
+                            <div>
+                                <?php echo $protein ?>G
+                                <br />PROTEIN 
+                            </div>
+                        <?php endif ?>
+                        <?php if ($carbs): ?>
+                            <div>
+                                <?php echo $carbs ?>G
+                                <br />CARBS
+                            </div>
+                        <?php endif ?>
+                        <?php if ($fat): ?>
+                            <div>
+                                <?php echo $fat ?>G
+                                <br />FAT      
+                            </div>
+                        <?php endif ?>
+                    </div>
+                <?php endif ?>
+            </div>
+        <?php endif ?>
+    </div>
+    <?php
+}
