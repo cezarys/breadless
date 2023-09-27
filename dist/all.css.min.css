@@ -656,6 +656,12 @@ header div>ul li a{font-size:45rem;line-height:1.16;font-family:"BNAxelGrotesk";
 }#home-hero .button-wrapper{margin-top:110rem}
 .admin-bar #home-hero{min-height:calc(100vh - 32px - 90rem)}
 #entire-content .one-menu{max-width:460rem;text-align:center;margin:auto}
+#entire-content .one-menu .one-menu-price-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:35rem}
+#entire-content .one-menu .one-menu-price-wrapper .one-menu-price{margin-left:4rem;margin-right:4rem;padding:10rem 14rem;border-radius:5rem;font-family:"BNAxelGrotesk";text-transform:uppercase;font-size:26rem;line-height:1.16;font-weight:bold;color:#fff9f0;background:#003b21}
+@media all and (max-width:575px){#entire-content .one-menu .one-menu-price-wrapper .one-menu-price{font-size:25rem}
+}#entire-content .one-menu .one-menu-price-wrapper .one-menu-macros{padding:10rem 14rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:4rem;margin-right:4rem;background:#f9f3e9;border-radius:4rem;text-align:left;border-radius:5rem}
+#entire-content .one-menu .one-menu-price-wrapper .one-menu-macros>div{color:#003b21}
+#entire-content .one-menu .one-menu-price-wrapper .one-menu-macros>div:not(:last-child){margin-right:15rem}
 #entire-content .one-menu .one-menu-picture{position:relative;width:100%;padding-bottom:100%;display:block;margin-bottom:30rem}
 #entire-content .one-menu .one-menu-picture img,#entire-content .one-menu .one-menu-picture:before{position:absolute;top:50%;left:50%;width:100%;height:100%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 #entire-content .one-menu .one-menu-picture:before{content:"";border-radius:100%;background:#f7f1e7}
@@ -807,4 +813,50 @@ footer .footer-left-row .footer-menus .column-3 ul a{font-size:16rem}
 }.join-team-breadless{margin-bottom:80rem}
 .join-team-breadless svg{width:100%;max-width:540rem;height:auto}
 #about-community{padding:250rem 0}
+#about-community h2{margin-bottom:60rem;font-size:75rem;line-height:1.16}
+@media all and (max-width:1024px){#about-community h2{font-size:65rem}
+}@media all and (max-width:575px){#about-community h2{font-size:45rem}
+}#about-community .owl-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:30rem;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#about-community .owl-nav button{outline:0}
 #about-community .one-about-carousel{width:780rem}
+#about-community .one-about-carousel .oac-picture{margin-bottom:50rem}
+#about-community .one-about-carousel .oac-picture a{display:block}
+#about-community .one-about-carousel .oac-title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:28rem;font-size:45rem;line-height:1.16;font-family:"BNAxelGrotesk";text-transform:uppercase}
+@media all and (max-width:575px){#about-community .one-about-carousel .oac-title{font-size:30rem}
+}#about-community .one-about-carousel .oac-text{font-size:24rem;line-height:1.16}
+@media all and (max-width:575px){#about-community .one-about-carousel .oac-text{font-size:21rem}
+}#about-community .one-about-carousel .oac-see-more a{font-size:18rem;line-height:1.16;font-weight:bold;text-transform:uppercase;color:#003b21}
+#about-community .one-about-carousel .oac-see-more a:hover{color:#df1173}
+header div>ul li.current-menu-item a{color:#fec43c}
+@media all and (max-width:1024px){#about-hero{padding-top:100rem;padding-bottom:100rem}
+#about-community{padding:100rem 0}
+#about-community .one-about-carousel{width:400rem}
+#about-hero h1{margin-bottom:60rem}
+}@media all and (max-width:575px){#about-hero,#the-breadless-way{padding:60rem 0}
+#about-hero{padding-bottom:0}
+#the-breadless-way h2{margin-bottom:60rem}
+#about-hero h1 br{display:none}
+.page-id-181 .one-home-tile .row{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+#the-breadless-way .col-sm-6:not(:last-child){margin-bottom:45rem}
+#about-bottom-picture .mobile{position:relative;left:-20rem;width:calc(100% + 40rem)}
+#home-tiles .one-home-tile .one-home-content{padding-top:40rem;padding-bottom:40rem}
+#about-community .one-about-carousel{width:300rem}
+#about-community .one-about-carousel .oac-picture{margin-bottom:20rem}
+#about-community .one-about-carousel .oac-title{font-size:22rem;margin-bottom:20rem}
+#about-community{padding:70rem 0}
+}#get-your{width:100%;max-width:1165rem;height:auto}
+#menu-main-feed-section{padding:100rem 0}
+#menu-main-feed-section .one-menu-section:not(:last-child){margin-bottom:160rem}
+@media all and (max-width:1024px){#menu-main-feed-section .one-menu-section:not(:last-child){margin-bottom:100rem}
+}@media all and (max-width:1024px){#menu-main-feed-section .one-menu-section:not(:last-child){margin-bottom:60rem}
+}#menu-main-feed-section .one-menu-section .one-menu-top{text-align:center;margin-bottom:100rem}
+#menu-main-feed-section .one-menu-section .one-menu-top h2{font-size:100rem;line-height:1.16;margin-bottom:0}
+@media all and (max-width:1024px){#menu-main-feed-section .one-menu-section .one-menu-top h2{font-size:70rem}
+}@media all and (max-width:575px){#menu-main-feed-section .one-menu-section .one-menu-top h2{font-size:50rem}
+}#menu-main-feed-section .one-menu-section .one-menu-top p{font-size:36rem;line-height:1.16;font-weight:600}
+@media all and (max-width:575px){#menu-main-feed-section .one-menu-section .one-menu-top p{font-size:25rem}
+}#menu-main-feed-section .row{margin:-60rem -15rem}
+#menu-main-feed-section .row>div{padding:60rem 15rem}
+#menu-section-with-background{padding-top:150rem;padding-bottom:100rem}
+@media all and (max-width:1024px){#menu-section-with-background{padding:60rem 0}
+}#menu-section-with-background h2{max-width:1000rem;color:#fff;margin-bottom:70rem}

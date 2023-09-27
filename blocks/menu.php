@@ -11,18 +11,20 @@ $menu = $section['menu']; //repeater
             $products = $single_menu['products']; //relationship
             ?>
             <div class="one-menu-section">
-                <h2>
-                    <?php echo $category_name ?>
-                </h2>
-                <p>
-                    <?php echo $description ?>
-                </p>
+                <div class="one-menu-top">
+                    <h2 data-delay="100">
+                        <?php echo $category_name ?>
+                    </h2>
+                    <p data-delay="200">
+                        <?php echo $description ?>
+                    </p>
+                </div>
                 <?php if (!empty($products)): ?>
                     <div class="row row-spaced">
                         <?php
                         foreach ($products as $product) {
                             ?>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4" data-delay="100|100|6">
                                 <?php
                                 oneMenu($product, true);
                                 ?>

@@ -7,7 +7,7 @@ $slider = $section['slider']; //repeater
 ?>
 <div id="about-community">
     <div class="container-fluid">
-        <h2>
+        <h2 data-delay="100">
             <?php echo $title ?>
         </h2>
         <div id="about-community-slider" class="owl-carousel">
@@ -21,7 +21,7 @@ $slider = $section['slider']; //repeater
                 $url = $single_slider['url']; //text
                 
                 ?>
-                <div class="one-about-carousel">
+                <div data-delay="100|100|8" class="one-about-carousel">
                     <p class="oac-picture">
                         <a href="<?php echo $url ?>">
                             <?php

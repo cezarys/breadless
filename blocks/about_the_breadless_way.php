@@ -29,7 +29,7 @@ $content = $section['content']; //repeater
 </div>
 <div id="the-breadless-way">
     <div class="container-fluid">
-        <h2>
+        <h2  data-delay="100">
             <?php echo $title ?>
         </h2>
         <?php if (!empty($content)): ?>
@@ -39,7 +39,7 @@ $content = $section['content']; //repeater
                     $title = $single_content['title']; //text
                     $text = $single_content['text']; //textarea
                     ?>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6"  data-delay="100|100|2">
                         <div class="one-b-content">
                             <h3>
                                 <?php echo $title ?>

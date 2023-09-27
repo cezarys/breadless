@@ -1044,9 +1044,60 @@ header
 {
     .one-menu
     {
+
+
+
         max-width: 460rem;
         text-align:center;
         margin:auto;
+
+
+
+        .one-menu-price-wrapper
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:35rem;
+
+            .one-menu-price
+            {
+                margin-left: 4rem;
+                margin-right: 4rem;
+                padding: 10rem 14rem;
+                border-radius:5rem;
+                @include BNAxelGrotesk;
+                @include fs26;
+                font-weight:bold;
+                color:$bodyBg;
+                background:$green;
+            }
+
+            .one-menu-macros
+            {
+                padding: 10rem 14rem;
+                display:flex;
+                align-items: center;
+                margin-left: 4rem;
+                margin-right: 4rem;
+                background: #F9F3E9;
+                border-radius: 4rem;
+                text-align: left;
+                border-radius:5rem;
+
+
+                >div
+                {
+                    color:$fontColor;
+                    &:not(:last-child)
+                        {
+                        margin-right:15rem;
+                    }
+                }
+
+            }
+
+        }
 
         .one-menu-picture
         {
@@ -1869,30 +1920,30 @@ footer
 {
     #home-tiles .one-home-tile:nth-child(1)
         {
-        
+
         p:first-child
             {
             text-transform: uppercase;
             margin-bottom: 25rem;
         }
-        
+
         h2
         {
             @include fs75;
             @media all and (min-width: 1025px)
-            {
+                {
                 font-size: 70rem;
                 line-height: 0.9;
             }
         }
-        
+
         p:not(.button-wrapper)
             {
             @include fs26;
         }
     }
-    
-    
+
+
     #home-tiles .one-home-tile:nth-child(2)
         {
         p
@@ -1951,33 +2002,262 @@ footer
 #about-community
 {
     padding: 250rem 0;
-    
+
+    h2
+    {
+        margin-bottom: 60rem;
+        @include fs75;
+
+    }
+
+    .owl-nav
+    {
+        display: flex;
+        align-items: center;
+        margin-top:30rem;
+        justify-content: space-between;
+
+        button
+        {
+            outline: 0;
+        }
+    }
+
     .one-about-carousel
     {
         width: 780rem;
         .oac-picture
         {
+            margin-bottom: 50rem;
             a
             {
+                display:block;
                 img
                 {
-                    
+
                 }
             }
         }
-        
+
         .oac-title
         {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28rem;
+            @include fs45;
+            @include BNAxelGrotesk;
+
             span
             {
-                
+
             }
         }
-        
+
         .oac-text
         {
-            
+            @include fs24;
+        }
+
+
+
+        .oac-see-more
+        {
+            a
+            {
+                @include fs18;
+                font-weight:bold;
+                text-transform: uppercase;
+                color:$green;
+                &:hover
+                    {
+                    color:$pink;
+                }
+            }
         }
     }
+
+}
+
+header div>ul li.current-menu-item a
+{
+    color:$yellow;
+}
+
+@media all and (max-width: 1024px)
+{
+    #about-hero
+    {
+        padding-top: 100rem;
+        padding-bottom: 100rem;
+    }
+
+    #about-community
+    {
+        padding: 100rem 0;
+    }
+
+    #about-community .one-about-carousel
+    {
+        width:400rem;
+    }
+
+    #about-hero h1
+    {
+        margin-bottom: 60rem;
+    }
+}
+
+@media all and (max-width: 575px)
+{
+    #about-hero,
+    #the-breadless-way
+    {
+        padding: 60rem 0;
+    }
+
+    #about-hero
+    {
+        padding-bottom: 0;
+    }
+
+    #the-breadless-way h2
+    {
+        margin-bottom: 60rem;
+    }
+
+    #about-hero h1
+    {
+        br
+        {
+            display:none;
+        }
+    }
+
+    .page-id-181
+    {
+        .one-home-tile .row
+        {
+            flex-direction: column;
+        }
+    }
+
+    #the-breadless-way
+    {
+        .col-sm-6:not(:last-child)
+            {
+            margin-bottom: 45rem;
+        }
+    }
+
+    #about-bottom-picture .mobile
+    {
+        position:relative;
+        left: -20rem;
+        width: calc(100% + 40rem);
+    }
+
+    #home-tiles .one-home-tile .one-home-content
+    {
+        padding-top:40rem;
+        padding-bottom: 40rem;
+    }
+
+    #about-community .one-about-carousel
+    {
+        width:300rem;
+    }
+
+    #about-community .one-about-carousel .oac-picture
+    {
+        margin-bottom: 20rem;
+    }
+
+    #about-community .one-about-carousel .oac-title
+    {
+        font-size:22rem;
+        margin-bottom: 20rem;
+    }
+
+    #about-community
+    {
+        padding: 70rem 0;
+    }
+
+}
+
+#get-your
+{
+    width:100%;
+    max-width: 1165rem;
+    height:auto;
+}
+
+#menu-main-feed-section
+{
+    padding: 100rem 0;
+
+
+
+    .one-menu-section
+    {
+        &:not(:last-child)
+            {
+            margin-bottom: 160rem;
+            @media all and (max-width: 1024px)
+                {
+                margin-bottom: 100rem;
+            }
+            @media all and (max-width: 1024px)
+                {
+                margin-bottom: 60rem;
+            }
+        }
+
+        .one-menu-top
+        {
+            text-align:center;
+            margin-bottom: 100rem;
+
+
+            h2
+            {
+                @include fs100;
+                margin-bottom: 0;
+            }
+
+            p
+            {
+                @include fs36;
+                font-weight:600;
+            }
+        }
+    }
+
+    .row
+    {
+        margin: -60rem -15rem;
+        >div
+        {
+            padding: 60rem 15rem;
+        }
+    }
+}
+
+#menu-section-with-background
+{
+    padding-top:150rem;
+    padding-bottom: 100rem;
     
+    @media all and (max-width: 1024px)
+    {
+        padding: 60rem 0;
+    }
+    
+    h2
+    {
+        max-width: 1000rem;
+        color:#fff;
+        margin-bottom: 70rem;
+    }
 }
