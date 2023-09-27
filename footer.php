@@ -9,7 +9,7 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
     <div class="row row-0">
         <div class="col-sm-6">
             <div class="footer-left-row">
-                <div class="footr-menus">
+                <div class="footer-menus">
                     <div class="column-1">
                         <?php
                         imgOrSvg($footer_logo);
@@ -32,13 +32,17 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
             </div>
         </div>
         <div class="col-sm-6">
-            <p class="footer-sub-text-1">
-                <?php echo $footer_newsletter_text_1 ?>
-            </p>
-            <p class="footer-sub-text-1">
-                <?php echo $footer_newsletter_text_2 ?>
-            </p>
-            <?php echo $footer_form_shortcode ?>
+            <div class="footer-right-row">
+                <div>
+                    <p class="footer-sub-text-1">
+                        <?php echo $footer_newsletter_text_1 ?>
+                    </p>
+                    <p class="footer-sub-text-1">
+                        <?php echo $footer_newsletter_text_2 ?>
+                    </p>
+                    <?php echo do_shortcode($footer_form_shortcode) ?>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -46,6 +50,8 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
 
 <script>
     var google_maps_key = '<?php echo get_field('google_maps_key', 'option') ?>';
+    var leftArrow = '<?php echo loadSvg('arrow-left.svg') ?>';
+    var rightArrow = '<?php echo loadSvg('arrow-right.svg') ?>';
 </script>
 
 <?php wp_footer() ?>

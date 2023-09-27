@@ -20,7 +20,10 @@ $favicon = get_field('favicon', 'option');
         <?php if ($favicon): ?>
             <link href="<?php echo $favicon['url'] ?>" rel="shortcut icon" />
         <?php endif ?>
-        <?php wp_head(); ?>       
+        <?php wp_head(); ?> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body <?php body_class(); ?> data-ajax-url="<?php echo admin_url('admin-ajax.php'); ?>" data-home-url="<?php echo get_home_url() ?>"> 
         <?php echo get_field('schema', 'option') ?>
@@ -61,13 +64,13 @@ $favicon = get_field('favicon', 'option');
             #overlay > div
             {
                 padding: 15px;
-                
+
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
             }
-            
+
             #overlay img
             {
                 width: 100%;
@@ -84,10 +87,10 @@ $favicon = get_field('favicon', 'option');
                         <a id="ml" href="<?php echo get_home_url() ?>">
 
                             <?php
-                                imgOrSvg($mobile_logo);
+                            imgOrSvg($mobile_logo);
                             ?> 
                         </a>
-                        <?php endif ?>
+                    <?php endif ?>
 
                     <?php
                     $mobile_phone_in_header = get_field('mobile_phone_in_header', 'option');
@@ -114,12 +117,12 @@ $favicon = get_field('favicon', 'option');
                         <div class="col-sm-3 align-middle">
                             <div>
                                 <?php if ($logo): ?>
-                                        <a href="<?php echo get_home_url() ?>" id="dla">
+                                    <a href="<?php echo get_home_url() ?>" id="dla">
                                         <?php
                                         imgOrSvg($logo);
-                                            ?>                                            
-                                        </a>
-                                        <?php endif ?>
+                                        ?>                                            
+                                    </a>
+                                <?php endif ?>
                             </div>
                         </div>
                         <div class="col-sm-9 align-middle">

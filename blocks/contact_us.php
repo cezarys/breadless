@@ -21,6 +21,7 @@ $faq = $section['faq']; //repeater
                 </div>
             </div>
         </div>
+        <a id="faq"></a>
         <div id="contact-bottom">
             <div class="row row-spaced">
                 <div class="col-sm-5">

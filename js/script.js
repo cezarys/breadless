@@ -1,5 +1,6 @@
 (function ($)
 {
+    
     function number_format(number, decimals, dec_point, thousands_sep) {
         // Strip all characters but numerical ones.
         number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
@@ -390,6 +391,7 @@
 
     $(document).ready(function ()
     {
+     
 
         $('.one-faq-question').click(function (e)
         {
@@ -590,6 +592,29 @@
             $('#mobile-menu-wrapper,#mobile-header').toggleClass('active');
             $(this).toggleClass('open');
             $('body').toggleClass('no-scroll');
+        });
+        
+        
+        var navText = [leftArrow,rightArrow];
+        
+           $('#home-menu-slider').owlCarousel({
+           responsive:{
+                0:{
+                    items:1,
+                    nav:true,
+                    navText:navText
+                },
+                576:{
+                    items:2,
+                    nav:true,
+                    navText:navText
+                },
+                911:{
+                    items:3,
+                    nav:true,
+                    navText:navText
+                }
+            }
         });
 
 

@@ -20,7 +20,7 @@ $logos = $section['logos']; //repeater
                         $logo = $single_logos['logo']; //image
                         $max_width = $single_logos['max_width']; //image
                         ?>
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-4" id="featured-logo-<?php echo $key ?> ">
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-4" id="featured-logo-<?php echo $key ?>">
                             <?php
                             if($max_width)
                             {

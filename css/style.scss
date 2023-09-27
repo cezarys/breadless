@@ -1,9 +1,138 @@
-$fontColor: #333;
+$bodyBg: #FFF9F0;
+$fontColor: #003B21;
+$green: $fontColor;
+$yellow: #FEC43C;
+$pink: #DF1173;
+
+body
+{
+    background: #FFF9F0;
+}
+
+@font-face
+{
+    src: url('../fonts/BNAxelGrotesk-Bold.otf');
+    font-family: 'BNAxelGrotesk';
+    font-weight: 400;
+}
+
+@mixin BNAxelGrotesk{
+    font-family: 'BNAxelGrotesk';
+    text-transform: uppercase;
+}
+
+@mixin inter
+{
+    font-family: 'Inter', sans-serif;
+}
+
+@mixin fs14
+{
+    font-size: 14rem;
+    line-height: 1.16;
+}
+
 
 @mixin fs16
 {
     font-size: 16rem;
+    line-height: 1.16;
 }
+
+@mixin fs18
+{
+    font-size: 18rem;
+    line-height: 1.16;
+}
+
+@mixin fs20
+{
+    font-size: 20rem;
+    line-height: 1.16;
+}
+
+@mixin fs21
+{
+    font-size: 21rem;
+    line-height: 1.16;
+}
+
+@mixin fs24
+{
+    font-size: 24rem;
+    line-height: 1.16;
+}
+
+@mixin fs26
+{
+    font-size: 26rem;
+    line-height: 1.16;
+}
+
+@mixin fs30
+{
+    font-size: 30rem;
+    line-height: 1.16;
+}
+
+@mixin fs36
+{
+    font-size: 36rem;
+    line-height: 1.16;
+}
+
+
+@mixin fs40
+{
+    font-size: 430rem;
+    line-height: 1.16;
+}
+
+@mixin fs45
+{
+    font-size: 45rem;
+    line-height: 1.16;
+}
+
+@mixin fs60
+{
+    font-size: 60rem;
+    line-height: 1.16;
+}
+
+@mixin fs70
+{
+    font-size: 70rem;
+    line-height: 1.16;
+}
+
+@mixin fs75
+{
+    font-size: 75rem;
+    line-height: 1.16;
+}
+
+@mixin fs100{
+    font-size: 100rem;
+    line-height: 1.16;
+}
+
+@mixin fs128
+{
+    font-size: 128rem;
+    line-height: 1.02;
+}
+
+body,select,textarea,input
+{
+    @include inter;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    @include BNAxelGrotesk;
+}
+
 
 .text-center
 {
@@ -144,7 +273,7 @@ a,a:hover,a:focus{
                     }
 
                 }
-            }            
+            }
         }
     }
 
@@ -273,7 +402,7 @@ header
                 background: #fff;
                 left: 0px;
                 margin: 0px;
-                padding: 5px;       
+                padding: 5px;
                 display: none;
 
                 li
@@ -401,7 +530,7 @@ header
 
 #desktop-delimiter
 {
-    height: 100px;
+    height: 90rem;
     @media all and (max-width:1024px)
         {
         display:none;
@@ -449,7 +578,7 @@ body.admin-bar
 /**Basic REM Stuff**/
 html
 {
-    font-size: 0.069vw;
+    font-size: 0.052vw;
 
     /*
     @media all and (min-width: 1440px)
@@ -491,32 +620,32 @@ p
 
 h1
 {
-   
+    @include fs75;
 }
 
 h2
 {
-    
+    @include fs60;
 }
 
 h3
 {
-    
+    @include fs40;
 }
 
 h4
 {
-    
+    @include fs30;
 }
 
 h5
 {
-    
+    @include fs26;
 }
 
 h6
 {
-    
+    @include fs20;
 }
 
 h1,h2,h3,h4,h5,h6
@@ -643,11 +772,11 @@ body.no-scroll
             z-index: 3;
             width: 32rem;
             height: 32rem;
-            background: url('../images/close-the-modal.png') no-repeat center; 
+            background: url('../images/close-the-modal.png') no-repeat center;
             background-size: contain;
             transform: translate(-5rem,5rem);
         }
-    }    
+    }
 
 }
 
@@ -716,21 +845,21 @@ body.no-scroll
     padding: 0 15rem;
     .loke-menu-icon
     {
-        position: static;   
+        position: static;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 30rem;
         height: 20rem;
     }
-    
+
     .loke-menu-icon span
     {
         margin: 0;
         float: none;
         transform-origin: 50% 50%;
     }
-    
+
     .loke-menu-icon.open
     {
         span
@@ -748,4 +877,545 @@ body.no-scroll
 {
     width:100%;
     overflow:hidden;
+}
+
+.container-fluid
+{
+    max-width: 1820rem;
+}
+
+header
+{
+    background: $green;
+    padding: 20rem 0;
+
+    #dla
+    {
+        display:block;
+        svg,img
+        {
+            width:100%;
+            max-width:250rem;
+            height:auto;
+        }
+    }
+
+    div>ul
+    {
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+
+        li
+        {
+            margin: 0;
+            a
+            {
+                @include fs45;
+                @include BNAxelGrotesk;
+                color:#fff;
+                text-transform: uppercase;
+                &:hover
+                    {
+                    color:$yellow;
+                }
+            }
+        }
+    }
+}
+
+@mixin theButton
+{
+    display: inline-block;
+    padding: 17rem 35rem;
+    text-transform: uppercase;
+    @include fs30;
+    @include BNAxelGrotesk;
+    color:#fff;
+    background: $pink;
+    border:0;
+    transition: 0.55s;
+    &:hover
+        {
+        background:$green;
+        color:#fff;
+    }
+}
+
+.the-button
+{
+    @include theButton;
+}
+
+#home-hero
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: calc(100vh - 90rem);
+    padding-bottom: 110rem;
+
+    h1
+    {
+        color:#fff;
+        @include fs128;
+        max-width: 1020rem;
+        text-transform: uppercase;
+    }
+
+    .button-wrapper
+    {
+        margin-top:110rem;
+    }
+}
+
+.admin-bar #home-hero
+{
+    min-height: calc(100vh - 32px - 90rem);
+}
+
+#entire-content
+{
+    .one-menu
+    {
+        max-width: 460rem;
+        text-align:center;
+        margin:auto;
+
+        .one-menu-picture
+        {
+            position:relative;
+            width:100%;
+            padding-bottom: 100%;
+            display:block;
+            margin-bottom:30rem;
+
+            img,
+            &:before
+                {
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:100%;
+                height:100%;
+                transform: translate(-50%,-50%);
+            }
+
+            &:before
+                {
+                content: "";
+                border-radius:100%;
+                background: #F7F1E7;
+            }
+
+            img
+            {
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        .one-menu-title
+        {
+            @include fs24;
+            @include BNAxelGrotesk;
+            text-transform: uppercase;
+            font-weight:bold;
+            margin-bottom: 7rem;
+
+            .alergen
+            {
+
+            }
+        }
+
+        .one-menu-descripion
+        {
+            @include fs21;
+        }
+
+
+
+        .one-menu-price-wrapper
+        {
+            .one-menu-price
+            {
+
+            }
+
+            .one-menu-macros
+            {
+                div
+                {
+
+                }
+            }
+        }
+    }
+
+
+}
+
+#home-menu
+{
+    padding: 260rem 0;
+    background: $bodyBg;
+    .button-wrapper
+    {
+        margin-top:130rem;
+        text-align:center;
+    }
+
+    #home-menu-slider
+    {
+        position:relative;
+        .owl-prev,
+        .owl-next
+        {
+            position:absolute;
+            bottom: -185rem;
+            outline: 0;
+
+        }
+
+        .owl-prev
+        {
+            left: 12%;
+        }
+
+        .owl-next
+        {
+            right:12%;
+        }
+    }
+
+    .the-button
+    {
+        width:100%;
+        max-width: 280rem;
+    }
+}
+
+#home-tiles
+{
+    .one-home-tile
+    {
+        .one-home-content
+        {
+            padding:15rem;
+            max-width: 675rem;
+            margin:auto;
+            h2
+            {
+                @include fs100;
+                line-height:1.02;
+                @media all and (min-width: 1025px)
+                    {
+                    line-height: 0.85;
+                }
+                text-transform: uppercase;
+            }
+
+            .button-wrapper
+            {
+                margin-top:90rem;
+            }
+        }
+
+        .col-sm-6:nth-child(1)
+            {
+            img
+            {
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .col-sm-6:nth-child(2)
+            {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:nth-child(1)
+            {
+            background:$green;
+
+            @media all and (min-width: 576px)
+                {
+                .row
+                {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            h1,h2,h3,p
+            {
+                color:$bodyBg;
+            }
+        }
+
+        &:nth-child(2)
+            {
+
+            h2 + p
+            {
+                margin-top:50rem;
+            }
+
+            a
+            {
+                color:$green;
+                @include BNAxelGrotesk;
+                @include fs30;
+                text-decoration: underline;
+                &:nth-child(1)
+                    {
+                    margin-right:40rem;
+                }
+
+                &:hover
+                    {
+                    color:$yellow;
+                }
+            }
+        }
+    }
+}
+
+@mixin pinkFont
+{
+    display:inline-block;
+    background:$pink;
+    color:$bodyBg;
+    text-decoration: none!important;
+    padding-left:5rem;
+    padding-right:5rem;
+}
+
+.pink-font
+{
+    @include pinkFont;
+}
+
+#home-we-are-making
+{
+    padding-top:270rem;
+    padding-bottom: 200rem;
+    text-align:center;
+
+    .container-fluid
+    {
+        max-width: 1333rem;
+        margin: auto;
+    }
+
+    h2
+    {
+
+        span
+        {
+            @include pinkFont;
+        }
+    }
+
+    h2+ p
+    {
+        margin-top:110rem;
+    }
+
+    p
+    {
+
+        a
+        {
+            @include theButton;
+            background:$green;
+            width:100%;
+            max-width: 280rem;
+            &:hover
+                {
+                background:$pink;
+            }
+        }
+    }
+}
+
+@mixin niceForm
+{
+    ::-webkit-input-placeholder {
+        color: $green;
+    }
+    ::-moz-placeholder {
+        color: $green;
+    }
+    :-ms-input-placeholder {
+        color: $green;
+    }
+    :-moz-placeholder {
+        color: $green;
+    }
+
+    input[type="text"]
+    {
+        height:50rem;
+        background:#fff;
+        padding: 0 15rem;
+        @include fs26;
+    }
+    
+    input[type="submit"],
+    button
+    {
+        @include theButton;
+        height:50rem;
+        padding: 0 25rem;
+        @include fs20;
+    }
+    
+}
+
+#home-featured-in
+{
+    padding: 100rem 0;
+    background: $yellow;
+    .row
+    {
+        align-items: center;
+    }
+
+    h2
+    {
+        @include fs60;
+        @media all and (min-width: 1025px)
+            {
+            font-size: 65rem;
+        }
+    }
+
+    .col-sm-9{
+        text-align:center;
+    }
+}
+
+footer
+{
+    .footer-left-row
+    {
+        height:100%;
+        display:flex;
+        flex-direction: column;
+        .footer-menus
+        {
+            flex-grow: 1;
+            padding: 15rem 70rem;
+            display:flex;
+
+            ul
+            {
+                list-style:none;
+                margin: 0;
+                padding: 0;
+                li
+                {
+                    a
+                    {
+                        @include fs30;
+                        color:$green;
+                        font-weight:bold;
+                        &:hover
+                            {
+                            color:$pink;
+                        }
+                    }
+                }
+            }
+
+            >div:nth-child(1)
+                {
+                width:150rem;
+                flex:150rem;
+                min-width:150rem;
+                max-width:150rem;
+            }
+
+            >div:nth-child(2)
+                {
+                width:calc(100% - 350rem);
+                flex:calc(100% - 350rem);
+                min-width:calc(100% - 350rem);
+                max-width:calc(100% - 350rem);
+                ul
+                {
+                    display:flex;
+                    flex-wrap:wrap;
+                    li
+                    {
+                        width: 50%;
+                        flex: 50%;
+                        min-width: 50%;
+                        max-width: 50%;
+                    }
+                }
+            }
+
+            >div:nth-child(3)
+                {
+                width:200rem;
+                flex:200rem;
+                min-width:200rem;
+                max-width:200rem;
+            }
+
+        }
+    }
+
+    .footer-right-row
+    {
+        height:100%;
+        padding: 15rem;
+        background:$green;
+        >div
+        {
+            width:100%;
+            max-width: 650rem;
+            margin:auto;
+        }
+    }
+
+    .footer-copyright
+    {
+        padding: 15rem 70rem;
+        background: $pink;
+        color:$bodyBg;
+        @include fs14;
+    }
+
+    .footer-sub-text-1,
+    .footer-sub-text-2
+    {
+        color:#fff;
+        @include BNAxelGrotesk;
+        max-width:587rem;
+    }
+
+    .footer-sub-text-1
+    {
+        @include fs16;
+        margin-bottom: 27rem;
+    }
+
+    .footer-sub-text-2
+    {
+        @include fs20;
+        margin-bottom: 30rem;
+    }
+
+    form
+    {
+        @include niceForm;
+    }
 }
