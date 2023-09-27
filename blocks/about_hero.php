@@ -17,12 +17,16 @@ $picture = $section['picture']; //image
         <div id="about-bottom-section">
             <div class="row row-spaced">
                 <div class="col-sm-6">
-                    <?php echo $text ?>
+                    <div id="about-text">
+                        <?php echo $text ?>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                    <?php
-                    imgOrSvg($picture);
-                    ?>
+                    <div id="about-bottom-picture">
+                        <?php
+                        imgOrSvg($picture);
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

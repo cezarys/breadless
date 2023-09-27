@@ -9,7 +9,7 @@ $logos = $section['logos']; //repeater
     <div class="container-fluid">
         <div class="row row-0">
             <div class="col-sm-3">
-                <h2>
+                <h2 data-delay="100">
                     <?php echo $title ?>
                 </h2>
             </div>
@@ -20,7 +20,7 @@ $logos = $section['logos']; //repeater
                         $logo = $single_logos['logo']; //image
                         $max_width = $single_logos['max_width']; //image
                         ?>
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-4" id="featured-logo-<?php echo $key ?>">
+                        <div data-delay="100|100|8" class="col-lg-3 col-md-4 col-sm-4 col-4" id="featured-logo-<?php echo $key ?>">
                             <?php
                             if($max_width)
                             {

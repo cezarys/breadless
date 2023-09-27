@@ -14,13 +14,21 @@ if (!empty($menu)) {
             <div id="home-menu-slider" class="owl-carousel">
                 <?php
                 foreach ($menu as $one_item) {
-                    oneMenu($one_item);
+                    ?>
+                    <div data-delay="100|100|5">
+                        <?php
+                        oneMenu($one_item);
+                        ?>
+                    </div>
+                    <?php
                 }
                 ?>         
             </div>
-            <?php
-            buttonWithWrapper($button_label, $button_url);
-            ?>
+            <div data-delay="300">
+                <?php
+                buttonWithWrapper($button_label, $button_url);
+                ?>
+            </div>
         </div>
     </div>
     <?php

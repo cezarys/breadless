@@ -1,6 +1,6 @@
 (function ($)
 {
-    
+
     function number_format(number, decimals, dec_point, thousands_sep) {
         // Strip all characters but numerical ones.
         number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
@@ -391,7 +391,7 @@
 
     $(document).ready(function ()
     {
-     
+
 
         $('.one-faq-question').click(function (e)
         {
@@ -400,7 +400,7 @@
             var tf = $(this).closest('.one-faq');
             var of = $(wrapper).find('.one-faq').not(tf);
             $(tf).toggleClass('active');
-            
+
             if ($(tf).hasClass('active'))
             {
                 $(tf).find('.one-faq-answer').slideDown(550);
@@ -432,7 +432,7 @@
                     var kk = (dd[1] * ($(this).index() % modulo));
                     $(this).attr('data-delay', parseInt(delay) + parseInt(kk));
                 }
-                
+
                 $(this).addClass('animated');
                 $(this).addClass('fadeInUp');
             }
@@ -593,26 +593,53 @@
             $(this).toggleClass('open');
             $('body').toggleClass('no-scroll');
         });
-        
-        
-        var navText = [leftArrow,rightArrow];
-        
-           $('#home-menu-slider').owlCarousel({
-           responsive:{
-                0:{
-                    items:1,
-                    nav:true,
-                    navText:navText
+
+
+        var navText = [leftArrow, rightArrow];
+
+        $('#about-community-slider').owlCarousel({
+            responsive: {
+                0: {
+                    autoWidth: true,
+                    items: 1,
+                    loop: true,
+                    margin: 20,
+                    nav: true,
+                    navText: navText
                 },
-                576:{
-                    items:2,
-                    nav:true,
-                    navText:navText
+                576: {
+                    autoWidth: true,
+                    items: 1,
+                    loop: true,
+                    margin: 40,
+                    nav: true,
+                    navText: navText
+                }
+            }
+        });
+
+        $('#home-menu-slider').owlCarousel({
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    margin: 15,
+                    loop: true,
+                    navText: navText
                 },
-                911:{
-                    items:3,
-                    nav:true,
-                    navText:navText
+                576: {
+                    items: 2,
+                    nav: true,
+                    margin: 15,
+                    loop: true,
+                    navText: navText
+                },
+                911: {
+                    items: 3,
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    navText: navText
                 }
             }
         });

@@ -108,7 +108,7 @@ $favicon = get_field('favicon', 'option');
                     </a>
                 </div>
                 <div id="mobile-menu-wrapper">
-                    <?php wp_nav_menu(array('theme_location' => 'top-menu')) ?>
+                    <?php wp_nav_menu(array('theme_location' => 'mobile-menu')) ?>
                 </div>
             </div>
             <header>

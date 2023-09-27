@@ -16,7 +16,7 @@ $button_url = $section['button_url']; //text
         }
     </style>
     <?php endif ?>
-    <div class="container-fluid">        
+    <div class="container-fluid" data-delay="100">        
         <?php
         echo $title;
         buttonWithWrapper($button_label, $button_url);
