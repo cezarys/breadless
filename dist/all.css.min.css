@@ -721,6 +721,7 @@ footer .footer-left-row .footer-menus>div:nth-child(2) ul li{width:50%;-webkit-b
 footer .footer-left-row .footer-menus>div:nth-child(3){width:200rem;-webkit-box-flex:200rem;-ms-flex:200rem;flex:200rem;min-width:200rem;max-width:200rem}
 footer .footer-right-row{height:100%;padding:30rem 15rem;background:#003b21}
 footer .footer-right-row>div{width:100%;max-width:650rem;margin:auto}
+footer .footer-right-row input{border:0 !important}
 footer .footer-copyright{padding:15rem 70rem;background:#df1173;color:#fff9f0;font-size:14rem;line-height:1.16}
 footer .footer-sub-text-1,footer .footer-sub-text-2{color:#fff;font-family:"BNAxelGrotesk";text-transform:uppercase;max-width:587rem}
 footer .footer-sub-text-1{font-size:16rem;line-height:1.16;margin-bottom:27rem}

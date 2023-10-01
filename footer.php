@@ -27,7 +27,7 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
                     </div>
                 </div>
                 <div class="footer-copyright">
-                    <?php echo $footer_copyright ?>
+                    <?php echo $footer_copyright ?>. Website Developed by <a href="https://bmgmediaco.com" target="_blank">BMG MEDIA</a>.
                 </div>
             </div>
         </div>
