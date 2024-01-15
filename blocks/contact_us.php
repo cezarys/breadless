@@ -10,8 +10,9 @@ $title = $section['title']; //text
 $faq = $section['faq']; //repeater
 ?>
 <div id="contact">
-    <div class="container-fluid">
-        <div id="contact-top">
+
+    <div id="contact-top">
+        <div class="container-fluid">
             <div class="row row-spaced">
                 <div class="col-sm-5" data-delay="100" id="contact-left">
                     <?php echo $left_content ?>
@@ -21,15 +22,17 @@ $faq = $section['faq']; //repeater
                 </div>
             </div>
         </div>
-        <a id="faq"></a>
-        <div id="contact-bottom">
+    </div>
+    <a id="faq"></a>
+    <div id="contact-bottom">
+        <div class="container-fluid">
             <div class="row row-spaced">
-                <div class="col-sm-5" data-delay="100" >
+                <div class="col-sm-3" data-delay="100" >
                     <h2>
                         <?php echo $title ?>
                     </h2>
                 </div>
-                <div class="col-sm-7" data-delay="200" >
+                <div class="col-sm-6" data-delay="200" >
                     <?php if (!empty($faq)): ?>
                         <div class="faq-wrapper">
                             <?php
@@ -57,4 +60,5 @@ $faq = $section['faq']; //repeater
             </div>
         </div>
     </div>
+
 </div>

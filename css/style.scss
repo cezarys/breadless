@@ -87,6 +87,16 @@ body
     }
 }
 
+@mixin fs32
+{
+    font-size: 32rem;
+    line-height: 1.16;
+    @media all and (max-width: 575px)
+        {
+        font-size: 25rem;
+    }
+}
+
 @mixin fs36
 {
     font-size: 36rem;
@@ -160,8 +170,22 @@ body
     }
 }
 
+@mixin fs94{
+    font-size: 94rem;
+    line-height: 1.16;
+    @media all and (max-width: 1024px)
+        {
+        font-size: 70rem;
+    }
+    @media all and (max-width: 575px)
+        {
+        font-size: 50rem;
+    }
+}
+
+
 @mixin fs100{
-    font-size: 100rem;
+    font-size: 94rem;
     line-height: 1.16;
     @media all and (max-width: 1024px)
         {
@@ -175,7 +199,7 @@ body
 
 @mixin fs128
 {
-    font-size: 128rem;
+    font-size: 132rem;
     line-height: 1.02;
     @media all and (max-width: 1024px)
         {
@@ -244,7 +268,7 @@ a,a:hover,a:focus{
 @media all and (max-width: 1024px)
 {
 
-    header
+    #entire-content > header
     {
         display:none;
     }
@@ -442,7 +466,7 @@ a,a:hover,a:focus{
     }
 }
 
-header
+#entire-content > header
 {
     div> ul
     {
@@ -603,7 +627,7 @@ header
     }
 }
 
-header
+#entire-content > header
 {
     position: fixed;
     top: 0px;
@@ -614,7 +638,7 @@ header
 
 body.admin-bar
 {
-    header
+    #entire-content > header
     {
         top: 32px;
     }
@@ -950,7 +974,7 @@ body.no-scroll
     max-width: 1820rem;
 }
 
-header
+#entire-content > header
 {
     background: $green;
     padding: 20rem 0;
@@ -993,9 +1017,10 @@ header
 @mixin theButton
 {
     display: inline-block;
-    padding: 17rem 35rem;
+    padding: 30rem 40rem;
+    padding-bottom: 25rem;
     text-transform: uppercase;
-    @include fs30;
+    @include fs40;
     @include BNAxelGrotesk;
     color:#fff;
     background: $pink;
@@ -1044,21 +1069,16 @@ header
 {
     .one-menu
     {
-
-
-
         max-width: 460rem;
-        text-align:center;
+        text-align:left;
         margin:auto;
-
-
 
         .one-menu-price-wrapper
         {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            margin-top:35rem;
+            margin-top:24rem;
 
             .one-menu-price
             {
@@ -1085,7 +1105,6 @@ header
                 text-align: left;
                 border-radius:5rem;
 
-
                 >div
                 {
                     color:$fontColor;
@@ -1096,7 +1115,14 @@ header
                 }
 
             }
+            
+            
 
+        }
+        
+        .one-menu-price-wrapper + .order-now-url
+        {
+            margin-top:20rem;
         }
 
         .one-menu-picture
@@ -1121,24 +1147,29 @@ header
             &:before
                 {
                 content: "";
-                border-radius:100%;
-                background: #F7F1E7;
+                border-radius:20rem;
+                background: #F9F3E9;
             }
 
             img
             {
                 object-fit: contain;
                 object-position: center;
+                width:90%;
+                height:90%;
             }
         }
 
         .one-menu-title
         {
-            @include fs24;
+            @include fs40;
             @include BNAxelGrotesk;
             text-transform: uppercase;
             font-weight:bold;
-            margin-bottom: 7rem;
+            margin-bottom: 24rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             .alergen
             {
@@ -1149,9 +1180,8 @@ header
         .one-menu-descripion
         {
             @include fs21;
+            margin-bottom: 24rem;
         }
-
-
 
         .one-menu-price-wrapper
         {
@@ -1209,7 +1239,7 @@ header
     .the-button
     {
         width:100%;
-        max-width: 280rem;
+        max-width: 332rem;
     }
 }
 
@@ -1257,9 +1287,25 @@ header
             justify-content: center;
         }
 
-        &:nth-child(1)
+        &.yellow-bg
+        {
+            background:$yellow;
+
+            h1,h2,h3,p
             {
-            background:$green;
+                color:$green;
+            }
+
+            h2
+            {
+                @include fs94;
+                margin-bottom: 115rem;
+            }
+
+            p
+            {
+                @include fs32;
+            }
 
             @media all and (min-width: 576px)
                 {
@@ -1269,14 +1315,24 @@ header
                 }
             }
 
-            h1,h2,h3,p
-            {
-                color:$bodyBg;
-            }
+
         }
 
-        &:nth-child(2)
+        &.non-yellow-bg
             {
+            padding: 70rem 0;
+
+            .col-sm-6:nth-child(1)
+                {
+                img
+                {
+                    display:block;
+                    max-width: 800rem;
+                    border-radius: 20rem;
+                    margin: auto;
+                }
+
+            }
 
             h2 + p
             {
@@ -1326,16 +1382,16 @@ header
 
     .container-fluid
     {
-        max-width: 1333rem;
         margin: auto;
     }
 
     h2
     {
-
+        @include fs94;
         span
         {
             @include pinkFont;
+            background: $green;
         }
     }
 
@@ -1423,6 +1479,8 @@ header
 
 footer
 {
+    background:$green;
+    padding-top:80rem;
     .footer-left-row
     {
         height:100%;
@@ -1444,7 +1502,7 @@ footer
                     a
                     {
                         @include fs30;
-                        color:$green;
+                        color:#FFF9F0;
                         font-weight:bold;
                         &:hover
                             {
@@ -1504,13 +1562,13 @@ footer
             max-width: 650rem;
             margin:auto;
         }
-                
-        
+
+
         input
         {
             border: 0!important;
         }
-        
+
     }
 
     .footer-copyright
@@ -1519,26 +1577,36 @@ footer
         background: $pink;
         color:$bodyBg;
         @include fs14;
+        a
+        {
+            color:#fff;
+            &:hover
+                {
+                color:$green;
+            }
+
+        }
     }
 
     .footer-sub-text-1,
     .footer-sub-text-2
     {
         color:#fff;
-        @include BNAxelGrotesk;
+
         max-width:587rem;
     }
 
     .footer-sub-text-1
     {
-        @include fs16;
-        margin-bottom: 27rem;
+        @include fs32;
+        @include BNAxelGrotesk;
+        margin-bottom: 32rem;
     }
 
     .footer-sub-text-2
     {
-        @include fs20;
-        margin-bottom: 30rem;
+        @include fs16;
+        margin-bottom: 32rem;
     }
 
     form
@@ -1828,8 +1896,7 @@ footer
 
 #about-hero
 {
-    padding-top:230rem;
-    padding-bottom: 130rem;
+  
 
     @media all and (min-width: 1025px)
         {
@@ -1925,7 +1992,7 @@ footer
     }
 }
 
-
+/*
 .page-id-181
 {
     #home-tiles .one-home-tile:nth-child(1)
@@ -1961,7 +2028,7 @@ footer
             @include fs26;
         }
     }
-}
+}*/
 
 
 
@@ -2089,7 +2156,7 @@ footer
 
 }
 
-header div>ul li.current-menu-item a
+#entire-content > header div>ul li.current-menu-item a
 {
     color:$yellow;
 }
@@ -2246,10 +2313,10 @@ header div>ul li.current-menu-item a
 
     .row
     {
-        margin: -60rem -15rem;
+        margin: -35rem -15rem;
         >div
         {
-            padding: 60rem 15rem;
+            padding: 35rem 15rem;
         }
     }
 }
@@ -2326,6 +2393,23 @@ header div>ul li.current-menu-item a
 
     .one-location
     {
+        height:100%;
+        display:flex;
+        flex-direction: column;
+
+        .ol-picture
+        {
+            flex-grow:1;
+            img
+            {
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+
         .the-map
         {
             margin-bottom: 70rem;
@@ -2375,10 +2459,10 @@ header div>ul li.current-menu-item a
                 {
                     text-decoration: underline;
                     text-decoration: underline;
-                    color:$green;
+                    color:$pink;
                     &:hover
                         {
-                        color:$pink;
+                        color:$green;
                     }
                 }
             }
@@ -2473,9 +2557,10 @@ header div>ul li.current-menu-item a
 
 #catering-option
 {
-    text-align: center;
+    background: $green;
 
-    .col-sm-6:nth-child(1)
+    .col-sm-6:nth-child(1),
+    .col-sm-6:nth-child(2)
         {
         background:$green;
         *
@@ -2484,10 +2569,10 @@ header div>ul li.current-menu-item a
         }
     }
 
-    .col-sm-6:nth-child(2)
+    /*.col-sm-6:nth-child(2)
         {
         background:$yellow;
-    }
+    }*/
 
     .co-content
     {
@@ -2504,12 +2589,12 @@ header div>ul li.current-menu-item a
 
     .oc-con-content
     {
-        max-width: 510rem;
-        margin:auto;
+        //max-width: 510rem;
+        //margin:auto;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
 
         h3
         {
@@ -2709,10 +2794,10 @@ header div>ul li.current-menu-item a
 
     .row
     {
-        margin: -40rem -70rem;
+        margin: -40rem -30rem;
         >div
         {
-            padding: 40rem 70rem;
+            padding: 40rem 30rem;
         }
         @media all and (max-width: 1024px)
             {
@@ -2785,12 +2870,12 @@ header div>ul li.current-menu-item a
 
 #contact
 {
-    background: $green;
-    padding: 200rem 0;
+  
+    padding-top:150rem;
 
     *
     {
-        color:$bodyBg;
+        color:$green;
     }
 
     .container-fluid
@@ -2814,17 +2899,17 @@ header div>ul li.current-menu-item a
     }
 
     .gform_required_legend
-        {
-            display:none!important;
-        }
+    {
+        display:none!important;
+    }
 
     form
     {
         max-width: 870rem;
-        
+
         label
         {
-            color:#fff;
+            color:$green;
             @include fs30;
             @include BNAxelGrotesk;
         }
@@ -2833,7 +2918,7 @@ header div>ul li.current-menu-item a
         input[type="email"],
         textarea
         {
-            border: 0;
+            border: 1px solid $green;
             background: $bodyBg;
             @include fs20;
             padding: 0 15rem;
@@ -2846,7 +2931,7 @@ header div>ul li.current-menu-item a
             height: 65rem;
 
         }
-        
+
         .gfield:not(:last-child)
             {
             margin-bottom: 30rem;
@@ -2870,7 +2955,11 @@ header div>ul li.current-menu-item a
 
     #contact-bottom
     {
-        margin-top:200rem;
+        padding-top:110rem;
+        padding-bottom: 80rem;
+        background:$yellow;
+        border-radius: 35rem 35rem 0 0;
+        
         h2
         {
             @include fs100;
@@ -2895,6 +2984,10 @@ header div>ul li.current-menu-item a
                         margin-left:10rem;
                         transition: 0.55s;
                         transform-origin: 50% 50%;
+                        path
+                        {
+                            stroke:$green;
+                        }
                     }
                 }
 
@@ -2931,27 +3024,27 @@ header div>ul li.current-menu-item a
     {
         padding: 60rem 0;
     }
-    
+
     #contact #contact-left h1
     {
         margin-bottom: 30rem;
     }
-    
+
     #contact #contact-bottom
     {
         margin-top:80rem;
     }
-    
+
     #contact form .gfield:not(:last-child)
     {
         margin-bottom: 15rem;
     }
-    
+
     #contact form input[type=text], #contact form input[type=email]
     {
         height:50rem;
     }
-    
+
     #contact form textarea
     {
         height:130rem;
@@ -2962,11 +3055,236 @@ header div>ul li.current-menu-item a
 {
     &.vegan
     {
-        
+
     }
 }
 
 #nutrition-information
 {
     padding: 60rem 0;
+}
+
+#tribe_events
+{
+
+}
+
+header
+{
+    overflow:hidden;
+}
+
+#entire-content>header div>ul
+{
+    position:relative;
+    top: 5rem;
+}
+
+#entire-content>header div>ul li.current-menu-item
+{
+
+}
+
+
+#entire-content>header div>ul li.order-now,
+#entire-content>header div>ul li.current-menu-item
+{
+
+    a
+    {
+        position:relative;
+        z-index: 3;
+        &:before{
+            top: -30rem;
+            height: calc(100% + 60rem);
+            left: -60rem;
+            width: 200%;
+            background:$yellow;
+            z-index: 1;
+            content: "";
+            position: absolute;
+            transition: 0.55s;
+        }
+        color:$green;
+        span
+        {
+            position:relative;
+            z-index: 3;
+
+        }
+
+        &:hover
+            {
+            color:$green;
+            &:before
+                {
+                background: $pink;
+            }
+        }
+    }
+}
+
+#entire-content>header div>ul li.current-menu-item
+{
+    a
+    {
+        color:#fff!important;
+        &:before
+            {
+             background: $pink;
+            left: -60rem;
+            width: calc(100% + 120rem);
+        }
+        &:hover
+            {
+            color:#fff!important;
+            &:before
+                {
+                background: $pink;
+            }
+        }
+    }
+}
+
+.home #home-hero h1
+{
+    a
+    {
+        padding: 28rem 40rem;
+        margin-left:10rem;
+        @include fs40;
+        vertical-align: text-top;
+    }
+}
+
+.order-now-url
+{
+    a
+    {
+        color:$pink;
+        @include BNAxelGrotesk;
+        @include fs21;
+    }
+}
+
+.column-1
+{
+    svg path
+    {
+        fill:#fff;
+    }
+}
+
+footer
+{
+    .gform_wrapper
+    {
+        form
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .gform-body
+        {
+            width: calc(100% - 75rem);
+            flex: calc(100% - 75rem);
+            min-width: calc(100% - 75rem);
+            max-width: calc(100% - 75rem);
+            margin: 0!important;
+            padding: 0!important;
+        }
+
+        .gform_footer
+        {
+            width: 75rem;
+            flex: 75rem;
+            min-width: 75rem;
+            max-width: 75rem;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+}
+
+#locations-top
+{
+    h1
+    {
+        text-align: left;
+    }
+    p
+    {
+        @include fs32;
+    }
+}
+
+#questions-section
+{
+    background: $yellow;
+    padding: 95rem 0;
+    h1,h2,h3,h4,p
+    {
+        color:$green;
+    }
+    
+    h1,h2,h3
+    {
+        @include fs94;
+    }
+    
+    @media all and (min-width: 1024px)
+    {
+        .container-fluid
+        {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            >*
+            {
+                width:50%;
+                flex:50%;
+                min-width:50%;
+                max-width:50%;
+            }
+        }
+    }
+    
+    
+    p
+    {
+        @include BNAxelGrotesk;
+        @include fs32;
+        a
+        {
+            color:$green;
+            text-decoration: underline;
+            &:hover
+                {
+                color:$green;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#entire-content footer
+{
+    #field_1_2
+    {
+        display:none;
+    }
+    
+    .gform_footer
+    {
+        margin: 0;
+        padding: 0;
+        input,button
+        {
+            margin-bottom: 0;
+            background:$yellow;
+        }
+    }
+    
 }

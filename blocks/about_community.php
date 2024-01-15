@@ -4,6 +4,14 @@ global $section;
 $title = $section['title']; //text
 
 $slider = $section['slider']; //repeater
+
+
+$slider = get_posts([
+    'posts_per_page'=>-1,
+    'post_type'=>'tribe_events'
+]);
+//var_dump($slider);
+
 ?>
 <div id="about-community">
     <div class="container-fluid">
@@ -14,18 +22,20 @@ $slider = $section['slider']; //repeater
             <?php
             foreach ($slider as $key => $single_slider) {
 
-                $picture = $single_slider['picture']; //image
-                $title = $single_slider['title']; //text
-                $date = $single_slider['date']; //text
-                $text = $single_slider['text']; //text
-                $url = $single_slider['url']; //text
-                
+                //$picture = $single_slider['picture']; //image
+                $title = $single_slider->post_title; //text
+                $date = ''; //text
+                $text = get_the_excerpt($single_slider->ID);
+                $url = get_permalink($single_slider->ID);//$single_slider['url']; //text
+                $date = get_post_meta($single_slider->ID,'_EventStartDate',true);
+                $date = strtotime($date);
+                $date = date('m.d.Y',$date);
                 ?>
                 <div data-delay="100|100|8" class="one-about-carousel">
                     <p class="oac-picture">
                         <a href="<?php echo $url ?>">
                             <?php
-                            imgOrSvg($picture);
+                            echo get_the_post_thumbnail($single_slider->ID,'full');
                             ?>
                         </a>
                     </p>

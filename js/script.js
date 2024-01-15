@@ -402,6 +402,14 @@
 
     $(document).ready(function ()
     {
+        
+        if($('body').hasClass('home'))
+        {
+            var button = $('.home #home-hero .the-button');
+            $('.home #home-hero h1').append(button);
+            $('.home #home-hero .button-wrapper').remove();
+        }
+        
 
 
         $('.one-faq-question').click(function (e)

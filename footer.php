@@ -26,9 +26,7 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
                         ?>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <?php echo $footer_copyright ?>. Website Developed by <a href="https://bmgmediaco.com" target="_blank">BMG MEDIA</a>.
-                </div>
+
             </div>
         </div>
         <div class="col-sm-6">
@@ -37,12 +35,17 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
                     <p class="footer-sub-text-1">
                         <?php echo $footer_newsletter_text_1 ?>
                     </p>
-                    <p class="footer-sub-text-1">
+                    <p class="footer-sub-text-2">
                         <?php echo $footer_newsletter_text_2 ?>
                     </p>
                     <?php echo do_shortcode($footer_form_shortcode) ?>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            <?php echo $footer_copyright ?>. Website Developed by <a href="https://bmgmediaco.com" target="_blank">BMG MEDIA</a>.
         </div>
     </div>
 </footer>

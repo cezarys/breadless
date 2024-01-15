@@ -14,8 +14,9 @@ if (!empty($tiles)) {
             $content = $single_tiles['content']; //wysiwyg
             $button_label = $single_tiles['button_label']; //text
             $button_url = $single_tiles['button_url']; //text
+            $background = $single_tiles['background']; //text
             ?>
-            <div class="one-home-tile">
+            <div class="one-home-tile <?php echo $background ?>">
                 <div class="row row-0">
                     <div class="col-sm-6" data-delay="200">
                         <?php
