@@ -903,3 +903,18 @@ add_shortcode('get_your_fill', function () {
     <?php
     return ob_get_clean();
 });
+
+add_filter( 'gform_submit_button_1', function($button, $form){
+    $dom = new DOMDocument();
+    $dom->loadHTML( '<?xml encoding="utf-8" ?>' . $button );
+    $input = $dom->getElementsByTagName( 'input' )->item(0);
+    $new_button = $dom->createElement( 'button' );
+    $new_button->appendChild( $dom->createTextNode( 'Submit' ) );
+    $input->removeAttribute( 'value' );
+    foreach( $input->attributes as $attribute ) {
+        $new_button->setAttribute( $attribute->name, $attribute->value );
+    }
+    $input->parentNode->replaceChild( $new_button, $input );
+ 
+    return $dom->saveHtml( $new_button );
+}, 10, 2 );

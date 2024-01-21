@@ -655,7 +655,7 @@ body.no-scroll{overflow:hidden}
 }@media all and (max-width:575px){#home-hero h1{font-size:60rem}
 }#home-hero .button-wrapper{margin-top:110rem}
 .admin-bar #home-hero{min-height:calc(100vh - 32px - 90rem)}
-#entire-content .one-menu{max-width:460rem;text-align:left;margin:auto}
+#entire-content .one-menu{max-width:100%;text-align:left;margin:auto}
 #entire-content .one-menu .one-menu-price-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:24rem}
 #entire-content .one-menu .one-menu-price-wrapper .one-menu-price{margin-left:4rem;margin-right:4rem;padding:10rem 14rem;border-radius:5rem;font-family:"BNAxelGrotesk";text-transform:uppercase;font-size:26rem;line-height:1.16;font-weight:bold;color:#fff9f0;background:#003b21}
 @media all and (max-width:575px){#entire-content .one-menu .one-menu-price-wrapper .one-menu-price{font-size:25rem}
@@ -670,13 +670,17 @@ body.no-scroll{overflow:hidden}
 #entire-content .one-menu .one-menu-title{font-size:40rem;line-height:1.16;font-family:"BNAxelGrotesk";text-transform:uppercase;text-transform:uppercase;font-weight:bold;margin-bottom:24rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 @media all and (max-width:575px){#entire-content .one-menu .one-menu-title{font-size:30rem}
 }#entire-content .one-menu .one-menu-descripion{font-size:21rem;line-height:1.16;margin-bottom:24rem}
-#home-menu{padding:260rem 0;background:#fff9f0}
+#home-menu{padding-top:100rem;padding-bottom:150rem;background:#fff9f0}
 #home-menu .button-wrapper{margin-top:130rem;text-align:center}
 #home-menu #home-menu-slider{position:relative}
 #home-menu #home-menu-slider .owl-prev,#home-menu #home-menu-slider .owl-next{position:absolute;bottom:-185rem;outline:0}
 #home-menu #home-menu-slider .owl-prev{left:12%}
 #home-menu #home-menu-slider .owl-next{right:12%}
 #home-menu .the-button{width:100%;max-width:332rem}
+#home-menu #new-menu-nav{text-align:center;margin-bottom:100rem}
+#home-menu #new-menu-nav a{display:inline-block;margin-left:12rem;margin-right:12rem;padding:15rem 20rem;color:#003b21;background:#f9f3e9;font-family:"BNAxelGrotesk";text-transform:uppercase;font-size:32rem;line-height:1.16}
+@media all and (max-width:575px){#home-menu #new-menu-nav a{font-size:25rem}
+}#home-menu #new-menu-nav a:hover,#home-menu #new-menu-nav a.active{background:#fec43c;color:#003b21}
 #home-tiles .one-home-tile .one-home-content{padding:15rem;max-width:675rem;margin:auto}
 #home-tiles .one-home-tile .one-home-content h2{font-size:94rem;line-height:1.16;line-height:1.02;text-transform:uppercase}
 @media all and (max-width:1024px){#home-tiles .one-home-tile .one-home-content h2{font-size:70rem}
@@ -1050,3 +1054,21 @@ footer .gform_wrapper .gform_footer{width:75rem;-webkit-box-flex:75rem;-ms-flex:
 #entire-content footer #field_1_2{display:none}
 #entire-content footer .gform_footer{margin:0;padding:0}
 #entire-content footer .gform_footer input,#entire-content footer .gform_footer button{margin-bottom:0;background:#fec43c}
+#home-menu-tabs .new-menu-tab{display:none}
+#home-menu-tabs .new-menu-tab.active{display:block}
+.home #home-tiles .one-home-tile:nth-child(2) .one-home-content{margin-left:0;margin-right:auto}
+.home #home-tiles .one-home-tile:nth-child(2) h4{font-size:40rem;line-height:1.16;font-family:"Inter",sans-serif;font-weight:500;max-width:480rem;margin-bottom:30rem}
+@media all and (max-width:575px){.home #home-tiles .one-home-tile:nth-child(2) h4{font-size:30rem}
+}.home #home-tiles .one-home-tile:nth-child(2) p svg{height:58rem;width:auto}
+.home #home-tiles .one-home-tile:nth-child(2) p a{margin-right:24rem}
+.home #home-tiles .one-home-tile:nth-child(2) h2+p img{max-width:350rem;margin-right:0;margin-left:auto;display:block}
+@media all and (min-width:1025px){.home #home-tiles .one-home-tile:nth-child(2) h2+p img{position:relative;left:100rem}
+}.home #home-we-are-making h2{position:relative}
+@media all and (min-width:1px){.home #home-we-are-making h2:before,.home #home-we-are-making h2:after{position:absolute;content:"";z-index:4}
+.home #home-we-are-making h2:before{width:320rem;height:270rem;background:url("../images/cake.png") no-repeat center;background-size:contain;bottom:calc(100% - 30rem);left:100rem}
+.home #home-we-are-making h2:after{width:260rem;height:240rem;background:url("../images/cookie.png") no-repeat center;background-size:contain;bottom:0;right:0}
+}footer input{padding-left:24rem}
+footer input,footer button{height:60rem !important}
+footer button{padding-left:20rem;padding-right:20rem;outline:0;-webkit-transition:.55s;transition:.55s}
+footer button:hover{background:#df1173 !important}
+footer button svg{width:40rem;height:auto}

@@ -1065,11 +1065,12 @@ body.no-scroll
     min-height: calc(100vh - 32px - 90rem);
 }
 
+
 #entire-content
 {
     .one-menu
     {
-        max-width: 460rem;
+        max-width: 100%;
         text-align:left;
         margin:auto;
 
@@ -1205,7 +1206,10 @@ body.no-scroll
 
 #home-menu
 {
-    padding: 260rem 0;
+    //padding: 260rem 0;
+    padding-top: 100rem;
+    padding-bottom: 150rem;
+    
     background: $bodyBg;
     .button-wrapper
     {
@@ -1240,6 +1244,31 @@ body.no-scroll
     {
         width:100%;
         max-width: 332rem;
+    }
+    
+    #new-menu-nav
+    {
+        text-align: center;
+        margin-bottom: 100rem;
+        a
+        {
+            display: inline-block;
+            margin-left: 12rem;
+            margin-right: 12rem;
+            padding: 15rem 20rem;
+            color:$green;
+            background: #F9F3E9;
+            @include BNAxelGrotesk;
+            @include fs32;
+            
+            &:hover,
+            &.active
+            {
+                background: $yellow;
+                color:$green;
+            }
+            
+        }
     }
 }
 
@@ -3287,4 +3316,134 @@ footer
         }
     }
     
+}
+
+#home-menu-tabs
+{
+    .new-menu-tab
+    {
+        display:none;
+        &.active
+        {
+            display:block;
+        }
+    }
+}
+
+.home #home-tiles
+{
+    .one-home-tile:nth-child(2)
+    {
+        .one-home-content
+        {
+            margin-left: 0;
+            margin-right: auto;
+        }
+        h4
+        {
+            @include fs40;
+            @include inter;
+            font-weight: 500;
+            max-width: 480rem;
+            margin-bottom: 30rem;
+        }
+        
+        p svg
+        {
+            height: 58rem;
+            width: auto;
+        }
+        
+        p a
+        {
+            margin-right: 24rem;
+        }
+        
+        h2 + p
+        {
+            img
+            {
+                max-width: 350rem;
+                margin-right: 0;
+                margin-left: auto;
+                display: block;
+                @media all and (min-width: 1025px)
+                {
+                    position:relative;
+                    left: 100rem;
+                }
+            }
+        }
+    }
+}
+
+.home #home-we-are-making
+{
+    h2
+    {
+        position:relative;
+        @media all and (min-width: 1px)
+        {
+            &:before,
+            &:after
+            {
+                position: absolute;
+                content: "";
+                z-index: 4;
+            }
+            
+            &:before
+                {
+                width: 320rem;
+                height: 270rem;
+                background: url('../images/cake.png') no-repeat center;
+                background-size: contain;
+                bottom: calc(100% - 30rem);
+                left: 100rem;
+                
+            }
+            
+            &:after
+                {
+                width: 260rem;
+                height: 240rem;
+                background: url('../images/cookie.png') no-repeat center;
+                background-size: contain;
+                bottom: 0rem;
+                right: 0;
+            }
+        }
+    }
+}
+
+footer
+{
+    input
+    {
+        padding-left: 24rem;
+    }
+    
+    input,button
+    {
+        height: 60rem!important;
+    }
+    
+    button
+    {
+        padding-left: 20rem;
+        padding-right: 20rem;
+        outline: 0;
+        transition: 0.55s;
+        
+        &:hover
+        {
+            background: $pink!important;
+        }
+        
+        svg
+        {
+            width: 40rem;
+            height: auto;
+        }
+    }
 }
