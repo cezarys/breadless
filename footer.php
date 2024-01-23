@@ -53,8 +53,8 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
 
 <script>
     var google_maps_key = '<?php echo get_field('google_maps_key', 'option') ?>';
-    var leftArrow = '<?php echo loadSvg('arrow-left.svg') ?>';
-    var rightArrow = '<?php echo loadSvg('arrow-right.svg') ?>';
+    var leftArrow = '<?php echo loadSvg('leftArrow.svg') ?>';
+    var rightArrow = '<?php echo loadSvg('rightArrow.svg') ?>';
 </script>
 
 <?php wp_footer() ?>

@@ -17,18 +17,20 @@ if (!empty($tiles)) {
             $background = $single_tiles['background']; //text
             ?>
             <div class="one-home-tile <?php echo $background ?>">
-                <div class="row row-0">
-                    <div class="col-sm-6" data-delay="200">
-                        <?php
-                        imgOrSvg($picture);
-                        ?>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="one-home-content" data-delay="200">
+                <div class="container-fluid">
+                    <div class="row <?php if($background!='yellow-bg'):?>row-45<?php endif ?> row-spaced">
+                        <div class="col-sm-6" data-delay="200">
                             <?php
-                            echo $content;
-                            buttonWithWrapper($button_label, $button_url);
+                            imgOrSvg($picture);
                             ?>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="one-home-content" data-delay="200">
+                                <?php
+                                echo $content;
+                                buttonWithWrapper($button_label, $button_url);
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>

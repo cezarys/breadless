@@ -27,6 +27,7 @@ $content = $section['content']; //repeater
     </svg>
 
 </div>
+<!--
 <div id="the-breadless-way">
     <div class="container-fluid">
         <h2  data-delay="100">
@@ -56,3 +57,4 @@ $content = $section['content']; //repeater
         <?php endif ?>
     </div>
 </div>
+-->

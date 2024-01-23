@@ -1,6 +1,7 @@
 <?php
 global $section;
 
+$left_content_title = $section['contact_left_title']; //wysiwyg
 $left_content = $section['left_content']; //wysiwyg
 
 $right_content = $section['right_content']; //wysiwyg
@@ -13,6 +14,9 @@ $faq = $section['faq']; //repeater
 
     <div id="contact-top">
         <div class="container-fluid">
+            <h1>
+                <?php echo nl2br($left_content_title); ?>
+            </h1>
             <div class="row row-spaced">
                 <div class="col-sm-5" data-delay="100" id="contact-left">
                     <?php echo $left_content ?>

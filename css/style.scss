@@ -55,6 +55,10 @@ body
 {
     font-size: 21rem;
     line-height: 1.16;
+    @media all and (max-width: 575px)
+        {
+        font-size: 16rem;
+    }
 }
 
 @mixin fs24
@@ -93,7 +97,7 @@ body
     line-height: 1.16;
     @media all and (max-width: 575px)
         {
-        font-size: 25rem;
+        font-size: 16rem;
     }
 }
 
@@ -179,7 +183,7 @@ body
     }
     @media all and (max-width: 575px)
         {
-        font-size: 50rem;
+        font-size: 40rem;
     }
 }
 
@@ -208,7 +212,7 @@ body
 
     @media all and (max-width: 575px)
         {
-        font-size: 60rem;
+        font-size: 42rem;
     }
 }
 
@@ -695,7 +699,7 @@ a
 
 p,h1,h2,h3,h4,h5,h6,li
 {
-    margin-bottom: 15rem;
+    margin-bottom: 22rem;
     &:last-child
         {
         margin-bottom: 0rem;
@@ -1031,6 +1035,12 @@ body.no-scroll
         background:$green;
         color:#fff;
     }
+    @media all and (max-width:575px)
+        {
+        padding: 17rem 22rem;
+        padding-bottom: 20rem;
+        font-size: 22rem;
+    }
 }
 
 .the-button
@@ -1116,11 +1126,11 @@ body.no-scroll
                 }
 
             }
-            
-            
+
+
 
         }
-        
+
         .one-menu-price-wrapper + .order-now-url
         {
             margin-top:20rem;
@@ -1209,7 +1219,7 @@ body.no-scroll
     //padding: 260rem 0;
     padding-top: 100rem;
     padding-bottom: 150rem;
-    
+
     background: $bodyBg;
     .button-wrapper
     {
@@ -1245,7 +1255,7 @@ body.no-scroll
         width:100%;
         max-width: 332rem;
     }
-    
+
     #new-menu-nav
     {
         text-align: center;
@@ -1260,17 +1270,18 @@ body.no-scroll
             background: #F9F3E9;
             @include BNAxelGrotesk;
             @include fs32;
-            
+
             &:hover,
-            &.active
-            {
+                &.active
+                {
                 background: $yellow;
                 color:$green;
             }
-            
+
         }
     }
 }
+
 
 #home-tiles
 {
@@ -1278,8 +1289,8 @@ body.no-scroll
     {
         .one-home-content
         {
-            padding:15rem;
-            max-width: 675rem;
+            /*padding:15rem;*/
+            /*max-width: 675rem;*/
             margin:auto;
             h2
             {
@@ -1290,6 +1301,15 @@ body.no-scroll
                     line-height: 0.85;
                 }
                 text-transform: uppercase;
+            }
+
+            p
+            {
+                margin-bottom: 30rem;
+                &:last-child
+                    {
+                    margin-bottom: 0;
+                }
             }
 
             .button-wrapper
@@ -1336,11 +1356,23 @@ body.no-scroll
                 @include fs32;
             }
 
+            .row
+            {
+
+            }
+
             @media all and (min-width: 576px)
                 {
                 .row
                 {
                     flex-direction: row-reverse;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    >div
+                    {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
                 }
             }
 
@@ -1348,7 +1380,7 @@ body.no-scroll
         }
 
         &.non-yellow-bg
-            {
+        {
             padding: 70rem 0;
 
             .col-sm-6:nth-child(1)
@@ -1356,7 +1388,7 @@ body.no-scroll
                 img
                 {
                     display:block;
-                    max-width: 800rem;
+                    /*max-width: 800rem;*/
                     border-radius: 20rem;
                     margin: auto;
                 }
@@ -1822,6 +1854,7 @@ footer
             display: flex;
             flex-direction: column;
             justify-content: center;
+
         }
     }
 
@@ -1925,7 +1958,7 @@ footer
 
 #about-hero
 {
-  
+
 
     @media all and (min-width: 1025px)
         {
@@ -2096,11 +2129,11 @@ footer
 
 .join-team-breadless
 {
-    margin-bottom: 80rem;
+    margin-bottom: 60rem;
     svg
     {
         width:100%;
-        max-width: 540rem;
+        max-width: 750rem;
         height: auto;
     }
 }
@@ -2295,7 +2328,7 @@ footer
 #get-your
 {
     width:100%;
-    max-width: 1165rem;
+    max-width: 1135rem;
     height:auto;
 }
 
@@ -2526,6 +2559,7 @@ footer
 
 #catering-hero
 {
+    padding: 100rem 0;
     .col-sm-6:nth-child(1)
         {
         img
@@ -2534,6 +2568,7 @@ footer
             height:100%;
             object-fit: cover;
             object-position: center;
+            border-radius: 20rem;
         }
     }
 
@@ -2589,13 +2624,15 @@ footer
     background: $green;
 
     .col-sm-6:nth-child(1),
-    .col-sm-6:nth-child(2)
+        .col-sm-6:nth-child(2)
         {
         background:$green;
-        *
-        {
-            color:$bodyBg;
-        }
+
+    }
+
+    *
+    {
+        color:$bodyBg;
     }
 
     /*.col-sm-6:nth-child(2)
@@ -2818,7 +2855,7 @@ footer
 
     .container-fluid
     {
-        max-width: 1670rem;
+
     }
 
     .row
@@ -2899,7 +2936,7 @@ footer
 
 #contact
 {
-  
+
     padding-top:150rem;
 
     *
@@ -2988,7 +3025,7 @@ footer
         padding-bottom: 80rem;
         background:$yellow;
         border-radius: 35rem 35rem 0 0;
-        
+
         h2
         {
             @include fs100;
@@ -3160,7 +3197,7 @@ header
         color:#fff!important;
         &:before
             {
-             background: $pink;
+            background: $pink;
             left: -60rem;
             width: calc(100% + 120rem);
         }
@@ -3193,6 +3230,18 @@ header
         color:$pink;
         @include BNAxelGrotesk;
         @include fs21;
+        display: inline-flex;
+        align-items: center;
+        span
+        {
+            text-decoration: underline;
+        }
+        svg
+        {
+            width:20rem;
+            height: auto;
+            margin-left:12rem;
+        }
     }
 }
 
@@ -3257,14 +3306,14 @@ footer
     {
         color:$green;
     }
-    
+
     h1,h2,h3
     {
         @include fs94;
     }
-    
+
     @media all and (min-width: 1024px)
-    {
+        {
         .container-fluid
         {
             display: flex;
@@ -3279,8 +3328,8 @@ footer
             }
         }
     }
-    
-    
+
+
     p
     {
         @include BNAxelGrotesk;
@@ -3304,7 +3353,7 @@ footer
     {
         display:none;
     }
-    
+
     .gform_footer
     {
         margin: 0;
@@ -3315,7 +3364,7 @@ footer
             background:$yellow;
         }
     }
-    
+
 }
 
 #home-menu-tabs
@@ -3333,7 +3382,7 @@ footer
 .home #home-tiles
 {
     .one-home-tile:nth-child(2)
-    {
+        {
         .one-home-content
         {
             margin-left: 0;
@@ -3347,18 +3396,18 @@ footer
             max-width: 480rem;
             margin-bottom: 30rem;
         }
-        
+
         p svg
         {
             height: 58rem;
             width: auto;
         }
-        
+
         p a
         {
             margin-right: 24rem;
         }
-        
+
         h2 + p
         {
             img
@@ -3368,7 +3417,7 @@ footer
                 margin-left: auto;
                 display: block;
                 @media all and (min-width: 1025px)
-                {
+                    {
                     position:relative;
                     left: 100rem;
                 }
@@ -3383,15 +3432,15 @@ footer
     {
         position:relative;
         @media all and (min-width: 1px)
-        {
-            &:before,
-            &:after
             {
+            &:before,
+                &:after
+                {
                 position: absolute;
                 content: "";
                 z-index: 4;
             }
-            
+
             &:before
                 {
                 width: 320rem;
@@ -3400,9 +3449,9 @@ footer
                 background-size: contain;
                 bottom: calc(100% - 30rem);
                 left: 100rem;
-                
+
             }
-            
+
             &:after
                 {
                 width: 260rem;
@@ -3422,28 +3471,788 @@ footer
     {
         padding-left: 24rem;
     }
-    
+
     input,button
     {
         height: 60rem!important;
     }
-    
+
     button
     {
         padding-left: 20rem;
         padding-right: 20rem;
         outline: 0;
         transition: 0.55s;
-        
+
         &:hover
-        {
+            {
             background: $pink!important;
         }
-        
+
         svg
         {
             width: 40rem;
             height: auto;
         }
     }
+}
+
+#entire-content #home-tiles
+{
+    .yellow-bg
+    {
+        img
+        {
+            max-width: 200%;
+            width: calc(100% + 65rem);
+        }
+    }
+}
+
+#entire-content
+{
+    .row-45
+    {
+        @media all and (min-width: 1025px)
+            {
+            margin-left: -45rem;
+            margin-right: -45rem;
+            >div
+            {
+                padding-left: 45rem;
+                padding-right: 45rem;
+            }
+        }
+    }
+}
+
+.page-id-181 #home-tiles
+{
+    p
+    {
+        @include fs32;
+    }
+    .button-wrapper
+    {
+        a
+        {
+            color:$pink;
+            margin: 0;
+            padding: 0;
+            background:none;
+            &:hover
+                {
+                color: $pink;
+                svg path
+                {
+                    fill:$pink;
+                }
+            }
+
+            svg
+            {
+                margin-left: 10rem;
+                width:30rem;
+                @media all and (max-width: 575px)
+                    {
+                    width: 20rem;
+                }
+            }
+
+        }
+    }
+
+    .yellow-bg
+    {
+        h2
+        {
+            display: flex;
+            margin-bottom: 60rem;
+            img
+            {
+                width: 300rem!important;
+                height: auto;
+                margin-left:20rem;
+            }
+        }
+    }
+
+    .non-yellow-bg
+    {
+
+    }
+}
+
+#c-title
+{
+    margin-bottom: 50rem;
+
+    svg
+    {
+        width:100%;
+        height:auto;
+        max-width: 550rem;
+
+    }
+}
+
+#menu-bottom-section
+{
+    padding-top: 90rem;
+    padding-bottom: 180rem;
+
+
+    #mb-with-bg
+    {
+        padding-top: 240rem;
+        padding-bottom: 210rem;
+        border-radius: 20rem;
+        margin-bottom: 200rem;
+        text-align: center;
+
+        p
+        {
+            max-width: 580rem;
+            margin-left: auto;
+            margin-right: auto;
+            @include fs32;
+        }
+
+        h2,p
+        {
+            color:#fff;
+        }
+
+        a
+        {
+            @include theButton;
+        }
+    }
+
+    #mb-bottom
+    {
+        text-align: center;
+        h2
+        {
+            margin-bottom: 60rem;
+        }
+    }
+
+}
+
+#contact-top
+{
+    padding-bottom: 150rem;
+    .col-sm-5:nth-child(1) a
+        {
+        font-weight:bold;
+    }
+
+    h1
+    {
+        margin-bottom: 90rem;
+        max-width: 740rem;
+        width: 100%;
+        @include fs100;
+    }
+
+    a
+    {
+        &:hover
+            {
+            color:$pink;
+        }
+    }
+}
+
+
+#press-media
+{
+    padding-top: 120rem;
+
+    #press-media-top
+    {
+        margin-bottom: 140rem;
+        h1
+        {
+            @include fs94;
+            span
+            {
+                @include pinkFont;
+            }
+        }
+
+        p
+        {
+            @include fs32;
+        }
+    }
+
+    #press-media-slider
+    {
+        .one-press-slide
+        {
+            width:800rem;
+
+            .ops-picture
+            {
+                margin-bottom: 30rem;
+
+                a
+                {
+
+                }
+            }
+
+            .osp-title-date
+            {
+                @include fs40;
+                @include BNAxelGrotesk;
+                color:$green;
+                margin-bottom: 36rem;
+                display:flex;
+                justify-content: space-between;
+                span:nth-child(1)
+                    {
+                    margin-right: 20rem;
+                }
+            }
+
+            .osp-text
+            {
+                margin-bottom: 36rem;
+                @include fs24;
+            }
+
+            .osp-view-more
+            {
+                a
+                {
+                    display: flex;
+                    align-items: center;
+                    color:$pink;
+                    @include fs32;
+                    @include BNAxelGrotesk;
+                    span
+                    {
+                        text-decoration: none;
+                    }
+
+                    svg path
+                    {
+                        transition: 0.55s;
+                    }
+
+                    svg
+                    {
+                        margin-left:20rem;
+                    }
+
+                    &:hover
+                        {
+                        color:$green;
+                        svg path
+                        {
+                            fill: $green;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .owl-nav
+        {
+            text-align:center;
+            margin-top: 60rem;
+
+            button
+            {
+                margin-left:12rem;
+                margin-right: 12rem;
+                outline: 0;
+
+            }
+        }
+    }
+}
+
+#home-menu
+{
+    .owl-nav
+    {
+        padding-top:50rem;
+        text-align: center;
+        a,button
+        {
+            margin-left: 10rem;
+            margin-right: 10rem;
+        }
+    }
+}
+
+
+@media all and (max-width: 575px)
+{
+    #home-hero
+    {
+        justify-content: flex-end;
+        h1
+        {
+            margin-bottom: 0rem;
+        }
+    }
+
+    .home #home-hero h1 a
+    {
+        margin-left: 0;
+        padding: 16rem 20rem;
+        margin-top:25rem;
+        display: table;
+    }
+
+    #home-menu #new-menu-nav a
+    {
+        font-size: 15rem;
+        padding: 7rem 10rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    #home-menu #new-menu-nav
+    {
+        margin-bottom: 45rem;
+    }
+
+    .one-menu-slide
+    {
+        width: 80vw;
+    }
+
+    #home-menu .the-button
+    {
+
+    }
+
+    #home-tiles .one-home-tile.yellow-bg .col-sm-6:nth-child(1) img
+    {
+        left: -15rem;
+        width: calc(100% + 30rem);
+        top: 15rem;
+        position:relative;
+    }
+
+    #home-tiles .one-home-tile.yellow-bg
+    {
+        .one-home-content
+        {
+            h2
+            {
+                margin-bottom: 44rem;
+            }
+        }
+    }
+
+    #home-tiles .one-home-tile .one-home-content
+    {
+        padding-bottom:10rem;
+    }
+
+    .split-on-mobile
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        .s1
+        {
+            width: 150rem;
+            flex: 150rem;
+            min-width: 150rem;
+            max-width: 150rem;
+            margin-left: 10rem;
+        }
+
+        .s2
+        {
+            width: calc(100% - 160rem);
+            flex: calc(100% - 160rem);
+            min-width: calc(100% - 160rem);
+            max-width: calc(100% - 160rem);
+
+            h4
+            {
+                font-size: 20rem;
+                text-align: left;
+                margin-bottom: 20rem;
+            }
+
+            p
+            {
+                text-align: left;
+                a
+                {
+                    margin-right: 9rem!important;
+                    margin-bottom: 9rem;
+                    display:inline-block;
+                    &:last-child
+                        {
+                        margin-right: 0!important;
+                        margin-bottom: 0rem;
+                    }
+                    img
+                    {
+                        height:30rem;
+                        width:auto;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #home-tiles .one-home-tile.non-yellow-bg
+    {
+        padding: 50rem 0;
+    }
+
+    .home #home-we-are-making h2:before
+    {
+        bottom: calc(100% - 30rem);
+        left: -30rem;
+        width: 120rem;
+        height: 100rem;
+    }
+
+    .home #home-we-are-making h2:after
+    {
+        width: 120rem;
+        height: 100rem;
+    }
+
+    #home-we-are-making
+    {
+        padding-top:20rem;
+    }
+
+    #about-hero
+    {
+        padding: 0;
+    }
+
+    .page-id-181
+    {
+        #home-tiles
+        {
+            .one-home-tile.non-yellow-bg
+            {
+                text-align: center;
+
+                .button-wrapper
+                {
+                    margin-top:0;
+                }
+
+                .one-home-content
+                {
+                    padding-top:0;
+                }
+
+                h2 + p
+                {
+                    margin-top: 0;
+                    text-align: left;
+                }
+
+                h2,p
+                {
+                    text-align: left;
+                    margin-bottom: 25rem;
+                    &:last-child
+                        {
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+
+            .one-home-tile.yellow-bg
+            {
+                .row
+                {
+                    flex-direction: column-reverse;
+                }
+
+                .one-home-content
+                {
+
+                    h2
+                    {
+                        align-items: flex-start;
+                    }
+
+                    h2 img
+                    {
+                        width: 130rem!important;
+                        height: auto!important;
+                    }
+
+                    h2,p
+                    {
+                        text-align: left;
+                    }
+                }
+
+            }
+        }
+
+        #home-tiles .one-home-tile.non-yellow-bg a
+        {
+            font-size:20rem;
+        }
+    }
+
+    .join-team-breadless
+    {
+        margin-bottom: 20rem;
+    }
+
+    footer .footer-left-row .footer-menus .column-2 ul li a,
+    footer .footer-left-row .footer-menus .column-3 ul li a
+    {
+        @include BNAxelGrotesk;
+        font-size: 20rem;
+    }
+
+    footer
+    {
+        padding-top:30rem;
+    }
+
+    footer .footer-sub-text-1
+    {
+        @include inter;
+        font-size: 12rem;
+        margin-bottom: 10rem;
+    }
+
+    footer .footer-sub-text-2
+    {
+        @include BNAxelGrotesk;
+        font-size: 16rem;
+    }
+
+    #locations
+    {
+        h1
+        {
+            margin-bottom: 0;
+            text-align: center;
+            font-size:40rem;
+        }
+
+        #locations-top
+        {
+            padding-bottom: 40rem;
+        }
+    }
+
+    #menu-main-feed-section
+    {
+        padding:40rem 0;
+    }
+
+    #menu-main-feed-section .one-menu-section .one-menu-top
+    {
+        margin-bottom: 50rem;
+    }
+
+    #entire-content .one-menu .one-menu-price-wrapper .one-menu-macros
+    {
+        font-size: 12rem;
+    }
+
+    #catering-hero
+    {
+        .row
+        {
+            flex-direction: column-reverse;
+        }
+    }
+
+    #catering-hero
+    {
+        padding: 50rem 0;
+    }
+
+    #c-title svg
+    {
+        max-width: 220rem;
+        height:auto;
+    }
+
+    #catering-hero #catering-hero-content
+    {
+        padding: 0;
+    }
+
+    #catering-hero #catering-hero-content p:not(.button-wrapper)
+    {
+        font-size: 16rem;
+    }
+
+    #c-title
+    {
+        margin-bottom: 40rem;
+    }
+
+    #catering-hero #catering-hero-content .button-wrapper
+    {
+        margin-top:40rem;
+        margin-bottom: 40rem;
+    }
+
+    #catering-option
+    {
+        .owl-nav
+        {
+            text-align:center;
+            margin-top: 20rem;
+
+            button
+            {
+                margin-left:12rem;
+                margin-right: 12rem;
+                outline: 0;
+
+            }
+        }
+    }
+    
+    #catering-option .oc-con-content h3:last-child
+    {
+        margin-bottom: 0;
+    }
+    
+    #get-custom-quote h2:nth-child(1)
+    {
+        margin-bottom: 30rem;
+        font-size: 40rem;
+    }
+    
+    #catering-option
+    {
+        padding-bottom: 50rem;
+    }
+    
+    #questions-section
+    {
+        text-align:center;
+        padding: 60rem 0;
+        p
+        {
+            font-size: 20rem;
+        }
+    }
+
+    #press-media
+    {
+        padding-top: 50rem;
+    }
+    
+    #press-media #press-media-top
+    {
+        margin-bottom: 50rem;
+        text-align: center;
+    }
+    
+    #press-media #press-media-slider .one-press-slide
+    {
+        width: 80vw;
+    }
+    
+    #press-media #press-media-slider .one-press-slide .ops-picture
+    {
+        img
+        {
+            border-radius: 10rem;
+        }
+    }
+    
+    #press-media #press-media-slider .one-press-slide .osp-title-date
+    {
+        margin-bottom: 20rem;
+    }
+    
+    #press-media #press-media-slider .one-press-slide .osp-title-date
+    {
+        font-size:20rem;
+    }
+    
+    #press .one-press a .op-top svg
+    {
+        width:20rem;
+    }
+    
+    #press-media #press-media-slider .owl-nav button svg
+    {
+        width:30rem;
+    }
+    
+    #press
+    {
+        padding: 60rem 0;
+    }
+    
+    #press-media #press-media-slider .one-press-slide .osp-text
+    {
+        font-size: 16rem;
+    }
+
+    #press-media #press-media-slider .one-press-slide .osp-view-more a svg
+    {
+        width:20rem;
+        margin-left:10rem;
+    }
+    
+    #contact-top
+    {
+        
+    }
+    
+    #contact-top
+    {
+        text-align: center;
+    }
+    
+    #contact #contact-bottom
+    {
+        padding-top: 60rem;
+        margin-top: 0;
+        h2
+        {
+            text-align: center;
+        }
+    }
+    
+    
+    #contact-top h1
+    {
+        text-align: center;
+        margin-bottom: 40rem;
+        font-size: 40rem;
+    }
+    
+    #contact #contact-bottom .faq-wrapper .one-faq .one-faq-question svg
+    {
+        width:20rem;
+        min-width:20rem;
+        max-width:20rem;
+    }
+    
+    #contact #contact-bottom h2
+    {
+        font-size: 35rem;
+    }
+    
 }

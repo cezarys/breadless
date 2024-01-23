@@ -403,6 +403,9 @@
     $(document).ready(function ()
     {
         
+        $('.page-id-181 #home-tiles .button-wrapper a').contents().wrap('span');
+        $('.page-id-181 #home-tiles .button-wrapper a').append('<svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9.87573C1.17157 9.87573 0.5 10.5473 0.5 11.3757C0.5 12.2042 1.17157 12.8757 2 12.8757L2 9.87573ZM33.0607 12.4364C33.6464 11.8506 33.6464 10.9009 33.0607 10.3151L23.5147 0.769133C22.9289 0.183346 21.9792 0.183346 21.3934 0.769132C20.8076 1.35492 20.8076 2.30467 21.3934 2.89045L29.8787 11.3757L21.3934 19.861C20.8076 20.4468 20.8076 21.3965 21.3934 21.9823C21.9792 22.5681 22.9289 22.5681 23.5147 21.9823L33.0607 12.4364ZM2 12.8757L32 12.8757L32 9.87574L2 9.87573L2 12.8757Z" fill="#DD1C74"/></svg>');
+        
         $('footer button').html('<svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10.5005C1.17157 10.5005 0.5 11.1721 0.5 12.0005C0.5 12.8289 1.17157 13.5005 2 13.5005L2 10.5005ZM43.0607 13.0612C43.6464 12.4754 43.6464 11.5256 43.0607 10.9398L33.5147 1.39389C32.9289 0.808106 31.9792 0.808105 31.3934 1.39389C30.8076 1.97968 30.8076 2.92943 31.3934 3.51521L39.8787 12.0005L31.3934 20.4858C30.8076 21.0716 30.8076 22.0213 31.3934 22.6071C31.9792 23.1929 32.9289 23.1929 33.5147 22.6071L43.0607 13.0612ZM2 13.5005L42 13.5005L42 10.5005L2 10.5005L2 13.5005Z" fill="#003B20"/></svg>');
         
         $('#new-menu-nav a').click(function(e){
@@ -624,8 +627,8 @@
 
 
         var navText = [leftArrow, rightArrow];
-
-        $('#about-community-slider').owlCarousel({
+        
+        $('#about-community-slider,#press-media-slider').owlCarousel({
             responsive: {
                 0: {
                     autoWidth: true,
@@ -646,10 +649,11 @@
             }
         });
 
-        $('#home-menu-slider').owlCarousel({
+        $('#home-menu-slider,.new-menu-slider').owlCarousel({
             responsive: {
                 0: {
                     items: 1,
+                    autoWidth: true,
                     nav: true,
                     margin: 15,
                     loop: true,
@@ -667,6 +671,24 @@
                     margin: 15,
                     loop: true,
                     nav: true,
+                    navText: navText
+                }
+            }
+        });
+        $('.catering-slider').owlCarousel({
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    margin: 15,
+                    loop: true,
+                    navText: navText
+                },
+                576: {
+                    items: 2,
+                    nav: true,
+                    margin: 15,
+                    loop: true,
                     navText: navText
                 }
             }

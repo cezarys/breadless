@@ -8,7 +8,7 @@ if (!empty($content)) {
     ?>
     <div id="catering-option">
         <div class="container-fluid">
-            <div class="row row-0">
+            <div class="catering-slider owl-carousel">
                 <?php
                 foreach ($content as $key => $single_content) {
 
@@ -16,7 +16,7 @@ if (!empty($content)) {
 
                     $content = $single_content['content']; //wysiwyg
                     ?>
-                    <div class="col-sm-6">
+                    <div class="one-catering-slide">
                         <div class="co-content">
                             <h2 data-delay="100" class="oc-con-title">
                                 <?php echo $title ?>

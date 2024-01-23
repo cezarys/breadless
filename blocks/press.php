@@ -17,9 +17,7 @@ $columns = [[], []];
 ?>
 <div id="press">
     <div class="container-fluid">
-        <h1 data-delay="100">
-            <?php echo $title ?>
-        </h1>
+     
 
         <div class="faq-wrapper">
             <div class="row row-spaced">

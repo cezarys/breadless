@@ -52,11 +52,11 @@ if (!empty($new_menu)) {
                 foreach ($new_menu as $key => $nm) {
                     ?>
                     <div data-key="<?php echo $key ?>" class="new-menu-tab <?php if($key==0):?>active<?php endif ?>">
-                        <div class="row row-spaced">
+                        <div class="new-menu-slider owl-carousel">
                             <?php
                             foreach ($nm['menu'] as $m) {
                                 ?>
-                                <div class="col-sm-4">
+                                <div class="one-menu-slide">
                                     <?php
                                     oneMenu($m);
                                     ?>
