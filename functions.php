@@ -825,7 +825,7 @@ function oneMenu($item, $full = false) {
         <?php if ($full): ?>
             <div class="one-menu-price-wrapper">
                 <?php if ($price): ?>
-                    <div class="one-menu-price">$<?php echo $price ?></div>
+                    <div class="one-menu-price"><?php echo $price ?></div>
                 <?php endif ?>
                 <?php if ($calories): ?>
                     <div class="one-menu-macros">

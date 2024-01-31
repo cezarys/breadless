@@ -27,7 +27,7 @@ $slider = $section['slider']; //repeater
                     ?>
                     <div class="one-press-slide">
                         <p class="ops-picture">
-                            <?php if ($url): ?>
+                            <?php if ($url && $picture): ?>
                                 <a href="<?php echo $url ?>" target="_blank">
                                 <?php endif ?>
                                 <?php
@@ -50,7 +50,7 @@ $slider = $section['slider']; //repeater
                         </p>
                         <?php if ($url): ?>
                             <p class="osp-view-more">
-                                <a href="<?php echo $url ?>">
+                                <a target="_blank" href="<?php echo $url ?>">
                                     <span>VIEW MORE</span>
                                     <?php
                                     echo loadSvg('pink-arrow.svg');

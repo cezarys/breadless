@@ -45,7 +45,14 @@ $footer_copyright = get_field('footer_copyright', 'option'); //text
     </div>
     <div class="footer-copyright">
         <div class="container-fluid">
-            <?php echo $footer_copyright ?>. Website Developed by <a href="https://bmgmediaco.com" target="_blank">BMG MEDIA</a>.
+            <div id="footer-row">
+                <div>
+                    <?php echo $footer_copyright ?>. Website Developed by <a href="https://bmgmediaco.com" target="_blank">BMG MEDIA</a>.
+                </div>
+                <div>
+                    Powered by <a href="https://www.solvnt.co/" target="_blank">SOLVNT</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

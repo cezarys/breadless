@@ -7,6 +7,7 @@ $content = $section['content']; //repeater
 if (!empty($content)) {
     ?>
     <div id="catering-option">
+        
         <div class="container-fluid">
             <div class="catering-slider owl-carousel">
                 <?php
